@@ -1,7 +1,27 @@
 // Core (Main Style)
 // Panorama
-#panorama {
-    width: 100%;
-    // height: 100%;
-    // z-index: -100;
+// #panorama {
+//     width: 100%;
+//     // height: 100%;
+//     // z-index: -100;
+// }
+
+.pan_hotspot {
+    height: 30px;
+    width: 30px;
+    background: url(/images/icon/1_24.png), white;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.photo_hotspot {
+    height: 30px;
+    width: 30px;
+    background: url(/images/icon/2_24.png), white;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    background-size: 22px 22px;
+    background-position-y: 3px;
 }

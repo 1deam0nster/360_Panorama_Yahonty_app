@@ -1,8 +1,12 @@
 // Common
-body {
+
+$menu: 16px;
+$body: 100%;
+body, html {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background: $bg;
     color: $base;
+    height: calc(#{$body} - #{$menu});
 }
 a {
     color: $link;

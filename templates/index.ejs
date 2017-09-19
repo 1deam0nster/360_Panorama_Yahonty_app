@@ -8,124 +8,204 @@ pageDescription = "Awesome site";
 <% include _nav %>
 <div id="panorama"></div>
 <script>
-    pannellum.viewer('panorama', {
+    viewer = pannellum.viewer('panorama', {
         "default": {
           "firstScene": "sky",
-          "author": "Ivan Storchack",
+        //   "author": "Ivan Storchack",
           "sceneFadeDuration": 1000
         },
         "scenes": {
           "sky":{
             "title": "home",
             "type": "equirectangular",
-            "panorama": "http://i.imgur.com/wgONwTB.jpg",
+            "panorama": "/images/pano/index.jpg",
             "haov": 360,
             "vaov": 180,
             "autoLoad": true,
-            "autoRotate": -2,
+            "autoRotate": -0.5,
+            "pitch": -35,
+            "yaw": -250,
+            "hfov": 120,
+            "hotSpotDebug": true,
             "hotSpots": [
                     {
-                        "pitch": -79,
-                        "yaw": 10,
+                        "pitch": -30,
+                        "yaw": -178,
+                        "type": "scene",
+                        "text": "Концертная площадь",
+                        "sceneId": "dalni_dvor",
+                        "cssClass": "pan_hotspot"
+                    },
+                    {
+                        "pitch": -22,
+                        "yaw": 159,
                         "type": "scene",
                         "text": "Ресторан",
-                        "sceneId": "enter"
+                        "sceneId": "restoran"
+                    },
+                    {
+                        "pitch": -19,
+                        "yaw": 137,
+                        "type": "scene",
+                        "text": "Вид на корпус 2",
+                        "sceneId": "second_corp"
+                    },
+                    {
+                        "pitch": -12,
+                        "yaw": 120,
+                        "type": "scene",
+                        "text": "Вид на корпус 1",
+                        "sceneId": "first_corp"
+                    },
+                    {
+                        "pitch": -9,
+                        "yaw": 125,
+                        "type": "scene",
+                        "text": "Вид на Конгресс-холл",
+                        "sceneId": "congress_hall"
+                    },
+                    {
+                        "pitch": -5,
+                        "yaw": 119,
+                        "type": "scene",
+                        "text": "Вид на лесное озеро 1",
+                        "sceneId": "ozero"
+                    },
+                    {
+                        "pitch": -6,
+                        "yaw": 131,
+                        "type": "scene",
+                        "text": "Вид на лесное озеро 2",
+                        "sceneId": "ozero2"
+                    },
+                    {
+                        "pitch": -4,
+                        "yaw": 108,
+                        "type": "scene",
+                        "text": "Вид на парковку",
+                        "sceneId": "parking"
+                    },
+                    {
+                        "pitch": -8,
+                        "yaw": 91,
+                        "type": "scene",
+                        "text": "Вид на котеджи",
+                        "sceneId": "cottedgi"
+                    },
+                    {
+                        "pitch": -8,
+                        "yaw": 59,
+                        "type": "scene",
+                        "text": "Вид на апартаменты",
+                        "sceneId": "apt"
+                    },
+                    {
+                        "pitch": -14,
+                        "yaw": 107,
+                        "text": "Вид на пляж",
+                        "type": "info",
+                        "cssClass": "photo_hotspot",
+                        "clickHandlerFunc": function() {
+                            openModal();
+                            currentSlide(1);
+                        }
                     }
                 ]
           },
-          "enter": {
-            "title": "Enter",
+          "apt": {
+            "title": "Вид на апартаменты",
             "type": "equirectangular",
-            "panorama": "http://i.imgur.com/r076shV.jpg",
+            "panorama": "/images/pano/apt.jpg",
             "haov": 360,
             "vaov": 180,
             "hfov": 120,
-            "autoLoad": true,
+            "autoLoad": true
             // "hotSpotDebug": true,
-            "hotSpots": [
-                    {
-                        "pitch": -23,
-                        "yaw": 123,
-                        "type": "scene",
-                        "text": "Войти",
-                        "sceneId": "resto"
-                    },
-                    {
-                        "pitch": -20,
-                        "yaw": -60,
-                        "type": "scene",
-                        "text": "Выйти",
-                        "sceneId": "sky"
-                    }
-                ]
           },
-          "resto": {
-            "title": "Resto",
+          "cottedgi": {
+            "title": "Вид на апартаменты",
             "type": "equirectangular",
-            "panorama": "http://i.imgur.com/mxlcRo9.jpg",
+            "panorama": "/images/pano/cottedgi.jpg",
             "haov": 360,
             "vaov": 180,
-            "autoLoad": true,
-            "hotSpots": [
-                    {
-                        "pitch": -8,
-                        "yaw": 128,
-                        "type": "scene",
-                        "text": "2 зал",
-                        "sceneId": "zal2"
-                    },
-                    {
-                        "pitch": -15,
-                        "yaw": 100,
-                        "type": "scene",
-                        "text": "2 этаж",
-                        "sceneId": "resto2"
-                    },
-                     {
-                        "pitch": -10,
-                        "yaw": 48,
-                        "type": "scene",
-                        "text": "Выйти",
-                        "sceneId": "enter"
-                    }
-                ]
+            "hfov": 120,
+            "autoLoad": true
           },
-          "resto2": {
-            "title": "Resto",
+          "parking": {
+            "title": "Вид на парковку",
             "type": "equirectangular",
-            "panorama": "http://i.imgur.com/CFqwRaU.jpg",
+            "panorama": "/images/pano/parking.jpg",
             "haov": 360,
             "vaov": 180,
-            "autoLoad": true,
-            "hotSpots": [
-                    {
-                        "pitch": -15,
-                        "yaw": 180,
-                        "type": "scene",
-                        "text": "Назад",
-                        "sceneId": "resto"
-                    }
-                ]
+            "hfov": 120,
+            "autoLoad": true
           },
-           "zal2": {
-            "title": "Zal2",
+          "ozero": {
+            "title": "Вид на озеро",
             "type": "equirectangular",
-            "panorama": "http://i.imgur.com/3l8Ad5O.jpg",
+            "panorama": "/images/pano/ozero.jpg",
             "haov": 360,
             "vaov": 180,
-            "autoLoad": true,
-            "hotSpots": [
-                    {
-                        "pitch": -15,
-                        "yaw": -70,
-                        "type": "scene",
-                        "text": "Назад",
-                        "sceneId": "resto"
-                    }
-                ]
+            "hfov": 120,
+            "autoLoad": true
+          },
+          "ozero2": {
+            "title": "Вид на озеро2",
+            "type": "equirectangular",
+            "panorama": "/images/pano/ozero2.jpg",
+            "haov": 360,
+            "vaov": 180,
+            "hfov": 120,
+            "autoLoad": true
+          },
+          "congress_hall": {
+            "title": "Вид на конгрес-холл",
+            "type": "equirectangular",
+            "panorama": "/images/pano/congress_hall.jpg",
+            "haov": 360,
+            "vaov": 180,
+            "hfov": 120,
+            "autoLoad": true
+          },
+          "first_corp": {
+            "title": "Вид на корпус 1",
+            "type": "equirectangular",
+            "panorama": "/images/pano/first_corp.jpg",
+            "haov": 360,
+            "vaov": 180,
+            "hfov": 120,
+            "autoLoad": true
+          },
+          "second_corp": {
+            "title": "Вид на корпус 2",
+            "type": "equirectangular",
+            "panorama": "/images/pano/second_corp.jpg",
+            "haov": 360,
+            "vaov": 180,
+            "hfov": 120,
+            "autoLoad": true
+          },
+          "restoran": {
+            "title": "Вид на ресторан",
+            "type": "equirectangular",
+            "panorama": "/images/pano/restoran.jpg",
+            "haov": 360,
+            "vaov": 180,
+            "hfov": 120,
+            "autoLoad": true
+          },
+          "dalni_dvor": {
+            "title": "Вид на концертную площадь",
+            "type": "equirectangular",
+            "panorama": "/images/pano/dalni_dvor.jpg",
+            "haov": 360,
+            "vaov": 180,
+            "hfov": 120,
+            "autoLoad": true
           }
         }
     
     });
     </script>
+<% include _images %>
 <% include _footer %>
