@@ -5,7 +5,7 @@ pageUrl = "";
 pageDescription = "Awesome site";
 %>
 <% include _header %>
-<% include _nav %>
+<% include _menu %>
 <div id="panorama"></div>
 <script>
     viewer = pannellum.viewer('panorama', {
@@ -16,7 +16,7 @@ pageDescription = "Awesome site";
         },
         "scenes": {
           "sky":{
-            "title": "home",
+            "title": "Яхонты",
             "type": "equirectangular",
             "panorama": "/images/pano/index.jpg",
             "haov": 360,
@@ -41,63 +41,72 @@ pageDescription = "Awesome site";
                         "yaw": 159,
                         "type": "scene",
                         "text": "Ресторан",
-                        "sceneId": "restoran"
+                        "sceneId": "restoran",
+                        "cssClass": "pan_hotspot"
                     },
                     {
                         "pitch": -19,
                         "yaw": 137,
                         "type": "scene",
                         "text": "Вид на корпус 2",
-                        "sceneId": "second_corp"
+                        "sceneId": "second_corp",
+                        "cssClass": "pan_hotspot"
                     },
                     {
                         "pitch": -12,
                         "yaw": 120,
                         "type": "scene",
                         "text": "Вид на корпус 1",
-                        "sceneId": "first_corp"
+                        "sceneId": "first_corp",
+                        "cssClass": "pan_hotspot"
                     },
                     {
                         "pitch": -9,
                         "yaw": 125,
                         "type": "scene",
                         "text": "Вид на Конгресс-холл",
-                        "sceneId": "congress_hall"
+                        "sceneId": "congress_hall",
+                        "cssClass": "pan_hotspot"
                     },
                     {
                         "pitch": -5,
                         "yaw": 119,
                         "type": "scene",
                         "text": "Вид на лесное озеро 1",
-                        "sceneId": "ozero"
+                        "sceneId": "ozero",
+                        "cssClass": "pan_hotspot"
                     },
                     {
                         "pitch": -6,
                         "yaw": 131,
                         "type": "scene",
                         "text": "Вид на лесное озеро 2",
-                        "sceneId": "ozero2"
+                        "sceneId": "ozero2",
+                        "cssClass": "pan_hotspot"
                     },
                     {
                         "pitch": -4,
                         "yaw": 108,
                         "type": "scene",
                         "text": "Вид на парковку",
-                        "sceneId": "parking"
+                        "sceneId": "parking",
+                        "cssClass": "pan_hotspot"
                     },
                     {
                         "pitch": -8,
                         "yaw": 91,
                         "type": "scene",
                         "text": "Вид на котеджи",
-                        "sceneId": "cottedgi"
+                        "sceneId": "cottedgi",
+                        "cssClass": "pan_hotspot"
                     },
                     {
                         "pitch": -8,
                         "yaw": 59,
                         "type": "scene",
                         "text": "Вид на апартаменты",
-                        "sceneId": "apt"
+                        "sceneId": "apt",
+                        "cssClass": "pan_hotspot"
                     },
                     {
                         "pitch": -14,
@@ -109,7 +118,73 @@ pageDescription = "Awesome site";
                             openModal();
                             currentSlide(1);
                         }
-                    }
+                    },
+                    {
+                        "pitch": -13,
+                        "yaw": 70,
+                        "text": "Вид на футбольное поле",
+                        "type": "info",
+                        "cssClass": "photo_hotspot",
+                        "clickHandlerFunc": function() {
+                            openModal();
+                            currentSlide(1);
+                        }
+                    },
+                    {
+                        "pitch": -17,
+                        "yaw": 58,
+                        "text": "Вид на пляж 2",
+                        "type": "info",
+                        "cssClass": "photo_hotspot",
+                        "clickHandlerFunc": function() {
+                            openModal();
+                            currentSlide(1);
+                        }
+                    },
+                    {
+                        "pitch": -17,
+                        "yaw": 44,
+                        "text": "Вид на двор зоопарка",
+                        "type": "info",
+                        "cssClass": "photo_hotspot",
+                        "clickHandlerFunc": function() {
+                            openModal();
+                            currentSlide(1);
+                        }
+                    },
+                    {
+                        "pitch": -17,
+                        "yaw": 33,
+                        "text": "Вид на фасад зоопарка",
+                        "type": "info",
+                        "cssClass": "photo_hotspot",
+                        "clickHandlerFunc": function() {
+                            openModal();
+                            currentSlide(1);
+                        }
+                    },
+                    {
+                        "pitch": -22,
+                        "yaw": 174,
+                        "text": "Вид на бахус хол",
+                        "type": "info",
+                        "cssClass": "photo_hotspot",
+                        "clickHandlerFunc": function() {
+                            openModal();
+                            currentSlide(1);
+                        }
+                    },
+                    {
+                        "pitch": -50,
+                        "yaw": -173,
+                        "text": "Прокат лодок",
+                        "type": "info",
+                        "cssClass": "photo_hotspot",
+                        "clickHandlerFunc": function() {
+                            openModal();
+                            currentSlide(1);
+                        }
+                    },
                 ]
           },
           "apt": {
@@ -165,7 +240,104 @@ pageDescription = "Awesome site";
             "haov": 360,
             "vaov": 180,
             "hfov": 120,
-            "autoLoad": true
+            "autoLoad": true,
+            "hotSpots": [
+                    {
+                        "pitch": 0.6,
+                        "yaw": 0.3,
+                        "type": "scene",
+                        "text": "Конгресс-холл",
+                        "sceneId": "congress_hall_1etash",
+                        "cssClass": ""
+                    },
+            ]
+          },
+          "congress_hall_1etash": {
+            "title": "Конгрес-холл",
+            "type": "equirectangular",
+            "panorama": "/images/congress_hotel/cong_holl_holl.jpg",
+            "hotSpotDebug": true,
+            "haov": 360,
+            "vaov": 180,
+            "hfov": 120,
+            "autoLoad": true,
+            "hotSpots": [
+                    {
+                        "pitch": -4,
+                        "yaw": -19,
+                        "type": "scene",
+                        "text": "Ресторан",
+                        "sceneId": "congress_hall_resto",
+                        "cssClass": "pan_hotspot"
+                    },
+                    {
+                        "pitch": -6,
+                        "yaw": 91,
+                        "type": "scene",
+                        "text": "Конференц зал",
+                        "sceneId": "congress_hall_hall",
+                        "cssClass": "pan_hotspot"
+                    },
+                    {
+                        "pitch": -2,
+                        "yaw": 26,
+                        "text": "Боулинг",
+                        "type": "info",
+                        "cssClass": "photo_hotspot",
+                        "clickHandlerFunc": function() {
+                            openModal();
+                            currentSlide(1);
+                        }
+                    },
+
+            ]
+          },
+          "congress_hall_resto": {
+            "title": "Ресторан",
+            "type": "equirectangular",
+            "panorama": "/images/congress_hotel/cong_resto.jpg",
+            "haov": 360,
+            "vaov": 180,
+            "hfov": 120,
+            "autoLoad": true,
+            "hotSpots": [
+                    {
+                        "pitch": -3,
+                        "yaw": 156,
+                        "type": "scene",
+                        "text": "Выход",
+                        "sceneId": "congress_hall_1etash",
+                        "cssClass": "pan_hotspot"
+                    },
+                    {
+                        "pitch": -3,
+                        "yaw": 58,
+                        "type": "scene",
+                        "text": "Боулинг",
+                        "sceneId": "bouling",
+                        "cssClass": "photo_hotspot"
+                    }
+            ]
+          },
+          "congress_hall_hall": {
+            "title": "Конференц зал",
+            "type": "equirectangular",
+            "panorama": "/images/congress_hotel/cong_conf.jpg",
+            "haov": 360,
+            "vaov": 180,
+            "hfov": 120,
+            "autoLoad": true,
+            "hotSpotDebug": true,
+            "hotSpots": [
+                    {
+                        "pitch": -1,
+                        "yaw": 178,
+                        "type": "scene",
+                        "text": "Выход",
+                        "sceneId": "congress_hall_1etash",
+                        "cssClass": "pan_hotspot"
+                    },
+            ]
           },
           "first_corp": {
             "title": "Вид на корпус 1",
@@ -174,7 +346,42 @@ pageDescription = "Awesome site";
             "haov": 360,
             "vaov": 180,
             "hfov": 120,
-            "autoLoad": true
+            "autoLoad": true,
+            "hotSpotDebug": true,
+            "hotSpots": [
+                    {
+                        "pitch": 0,
+                        "yaw": -37,
+                        "type": "scene",
+                        "text": "1202",
+                        "sceneId": "1202",
+                        "cssClass": "pan_hotspot"
+                    },
+                    {
+                        "pitch": 5,
+                        "yaw": -37,
+                        "type": "scene",
+                        "text": "1306",
+                        "sceneId": "1306",
+                        "cssClass": "pan_hotspot"
+                    },
+                    {
+                        "pitch": 10,
+                        "yaw": -37,
+                        "type": "scene",
+                        "text": "1202_2",
+                        "sceneId": "1202_2",
+                        "cssClass": "pan_hotspot"
+                    },
+                    {
+                        "pitch": 15,
+                        "yaw": -37,
+                        "type": "scene",
+                        "text": "1202_3",
+                        "sceneId": "1202_3",
+                        "cssClass": "pan_hotspot"
+                    },
+            ]
           },
           "second_corp": {
             "title": "Вид на корпус 2",
