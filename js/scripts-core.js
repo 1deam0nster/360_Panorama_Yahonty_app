@@ -1,38 +1,3 @@
-// // Add target="_blank" when user opens external link
-// (function() {
-//   var a = document.querySelectorAll('a');
-//   for (var i = 0; i < a.length; i++) {
-//     if (a[i].host !== location.host) {
-//       a[i].setAttribute('target', '_blank');
-//       a[i].setAttribute('rel', 'noopener noreferrer');
-//     }
-//   }
-// }());
-
-// var modal = document.getElementById('myModal');
-
-// // Get the image and insert it inside the modal - use its "alt" text as a caption
-// var img = document.getElementById('myImg');
-// var modalImg = document.getElementById("img01");
-// var captionText = document.getElementById("caption");
-// img.onclick = function(){
-//     modal.style.display = "block";
-//     modalImg.src = this.src;
-//     captionText.innerHTML = this.alt;
-// },
-
-// // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close")[0];
-
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function() { 
-//     modal.style.display = "none";
-// },
-
-// var viewer.img = function() {
-//   alert("test");
-// },
-
 // Photos modal menu 
 function open_img1() {
   $.fancybox.open([
@@ -57,39 +22,93 @@ function open_img1() {
 
 
 
-function openModal() {
-  document.getElementById('myModal').style.display = "block";    
+// Menu
+var submenus = document.querySelectorAll("ul.sub-menu");
+if(submenus.length > 0) for(var i=0; i<submenus.length; i++) {
+    var span = document.createElement('span');
+    span.classList.add('expand');
+    span.innerHTML = "+";
+
+    span.addEventListener('click', function(){
+        this.classList.toggle('active');
+        // this.nextElementSibling.classList.toggle('active');
+		  this.parentNode.classList.toggle('active');
+    });
+	
+    submenus[i].previousElementSibling.appendChild(span);
+    submenus[i].parentNode.insertBefore(span, submenus[i]);
 }
 
-function closeModal() {
-  document.getElementById('myModal').style.display = "none";
-}
 
-var slideIndex = 1;
-showSlides(slideIndex);
+/*
+	<a class="anyclass" href="#" data-toggle-class="active, someotherclass" data-toggle-target=".menu, self">Menu</a>
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+	data-toggle-class - classes to apply to targets
+	data-toggle-target - target's selectors to apply classes to
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+	If there is no 'data-toggle-target' attribute (only 'data-toggle-class'), classes are applyed to trigger element. 
+	If classes are needed to be appled to targets including trigger element itself, use keywords 'this' or 'self'.
+*/
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
+(function() {
+
+	function toggleClasses(classes, obj)
+	{
+		if(!classes) return;
+		if(!obj) return;
+		for(var n=0; n<classes.length; n++) obj.classList.toggle(classes[n].trim());
+	}
+
+	function applyToTargets(targetslist, dototargets, obj, dotoself, dotonext)
+	{
+		if(!targetslist) return;
+		if(!dototargets) return;
+
+		targetslist = targetslist.split(',');
+
+		for(var n=0; n<targetslist.length; n++)
+		{
+			targetslist[n] = targetslist[n].trim();
+			
+			if( (targetslist[n] == 'this' || targetslist[n] == 'self') && obj && dotoself ) dotoself(obj);
+			if(targetslist[n] == 'next' && obj && dotonext ) dotonext(obj.nextElementSibling);
+			else 
+			{
+				var elems = document.querySelectorAll( targetslist[n] );
+				if(elems.length > 0) 
+				{
+					for(var m=0; m<elems.length; m++) 
+					{
+						dototargets(elems[m]); 
+					}
+				}
+			}
+		}
+	}
+
+	var clickToggle = document.querySelectorAll('[data-toggle-class]');
+
+	if(clickToggle.length > 0) 
+	{
+		for(var i=0; i<clickToggle.length; i++) 
+		{
+			clickToggle[i].addEventListener('click', function(e) {
+				e.preventDefault();
+
+				var classes = this.getAttribute('data-toggle-class');
+				if(!classes) return;
+
+				classes = classes.split(',');
+				for(var n=0; n<classes.length; n++) classes[n] = classes[n].trim();
+
+				var targets = this.getAttribute('data-toggle-target');
+
+				if(!targets) toggleClasses(classes, this); //for(var n=0; n<classes.length; n++)  this.classList.toggle(classes[n]);
+				else 
+				{
+					applyToTargets(targets, function(elem){ toggleClasses(classes, elem); }, this, function(elem){ toggleClasses(classes, elem); }, function(elem){ toggleClasses(classes, elem); });
+				}
+			});
+		}
+	}
+})();
