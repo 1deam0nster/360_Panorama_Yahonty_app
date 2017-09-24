@@ -21,6 +21,28 @@ function open_img1() {
 }
 
 
+function open_img2() {
+  $.fancybox.open([
+    {
+      src  : '/images/photo/1.jpg',
+      opts : {
+        caption : 'First caption',
+        thumb   : 'https://c1.staticflickr.com/9/8148/29324593462_f890687b7a_m.jpg'
+      }
+    },
+    {
+      src  : '/images/photo/2.jpg',
+      opts : {
+        caption : 'Second caption',
+        thumb   : 'https://c2.staticflickr.com/6/5499/30972532232_e9a298a0c5_m.jpg'
+      }
+    }
+  ], {
+    loop : false
+  });
+}
+
+
 
 // Menu
 var submenus = document.querySelectorAll("ul.sub-menu");

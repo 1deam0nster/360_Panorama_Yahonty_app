@@ -1,8 +1,8 @@
 <% var
-pageTitle = "Toppage";
+pageTitle = "Яхонты";
 pageId = "index";
 pageUrl = "";
-pageDescription = "Awesome site";
+pageDescription = "VR тур Яхонты Ногинск";
 %>
 <% include _header %>
 <% include _menu %>
@@ -10,7 +10,7 @@ pageDescription = "Awesome site";
 <script>
     viewer = pannellum.viewer('panorama', {
         "default": {
-          "firstScene": "sky",
+          "firstScene": "odnoet_cott_gostinnaia",
         //   "author": "Ivan Storchack",
           "sceneFadeDuration": 1000
         },
@@ -104,7 +104,7 @@ pageDescription = "Awesome site";
                         "pitch": -8,
                         "yaw": 59,
                         "type": "scene",
-                        "text": "Вид на апартаменты",
+                        "text": "Вид на коттеджи",
                         "sceneId": "apt",
                         "cssClass": "pan_hotspot"
                     },
@@ -170,8 +170,7 @@ pageDescription = "Awesome site";
                         "type": "info",
                         "cssClass": "photo_hotspot",
                         "clickHandlerFunc": function() {
-                            openModal();
-                            currentSlide(1);
+                            open_img2();
                         }
                     },
                     {
@@ -194,10 +193,153 @@ pageDescription = "Awesome site";
             "vaov": 180,
             "hfov": 120,
             "autoLoad": true
-            // "hotSpotDebug": true,
           },
           "cottedgi": {
-            "title": "Вид на апартаменты",
+            "title": "Вид на коттеджи",
+            "type": "equirectangular",
+            "panorama": "/images/pano/cottedgi.jpg",
+            "haov": 360,
+            "vaov": 180,
+            "hfov": 120,
+            "autoLoad": true,
+            "hotSpotDebug": true,
+            "hotSpots": [
+                    {
+                        "pitch": -13,
+                        "yaw": 117,
+                        "type": "scene",
+                        "text": "Одноетажный коттедж",
+                        "sceneId": "odnoet_cott",
+                        "cssClass": "pan_hotspot"
+                    },
+                    {
+                        "pitch": -18,
+                        "yaw": 148,
+                        "type": "scene",
+                        "text": "Двухэтажный коттедж",
+                        "sceneId": "dvuxet_cott",
+                        "cssClass": "pan_hotspot"
+                    },
+            ]
+          },
+          "odnoet_cott": {
+            "title": "Одноетажный коттедж",
+            "type": "equirectangular",
+            "panorama": "/images/cott/1et_holl.jpg",
+            "haov": 360,
+            "vaov": 180,
+            "hfov": 120,
+            "autoLoad": true,
+            "hotSpotDebug": true,
+            "hotSpots": [
+                    {
+                        "pitch": -12,
+                        "yaw": -125,
+                        "type": "scene",
+                        "text": "Гостинная",
+                        "sceneId": "odnoet_cott_gostinnaia",
+                        "cssClass": "pan_hotspot"
+                    },
+                    {
+                        "pitch": -5,
+                        "yaw": -46,
+                        "type": "scene",
+                        "text": "Спальня",
+                        "sceneId": "odnoet_cott_spalna",
+                        "cssClass": "pan_hotspot"
+                    },
+                    {
+                        "pitch": -8,
+                        "yaw": -34,
+                        "type": "scene",
+                        "text": "Туалет",
+                        "sceneId": "odnoet_cott_toilet",
+                        "cssClass": "pan_hotspot"
+                    },
+                    {
+                        "pitch": -8,
+                        "yaw": 120,
+                        "type": "scene",
+                        "text": "Обзорный вид на коттеджи",
+                        "sceneId": "cottedgi",
+                        "cssClass": "pan_hotspot"
+                    },
+            ]
+          },
+          "odnoet_cott_gostinnaia": {
+            "title": "Гостинная",
+            "type": "equirectangular",
+            "panorama": "/images/cott/1et_gostinnaia.jpg",
+            "haov": 360,
+            "vaov": 180,
+            "hfov": 120,
+            "autoLoad": true,
+            "hotSpotDebug": true,
+            "hotSpots": [
+                    {
+                        "pitch": -9,
+                        "yaw": 167,
+                        "type": "scene",
+                        "text": "Холл",
+                        "sceneId": "odnoet_cott",
+                        "cssClass": "pan_hotspot"
+                    },
+                    {
+                        "pitch": -3,
+                        "yaw": 58,
+                        "text": "Балкон",
+                        "type": "info",
+                        "cssClass": "photo_hotspot",
+                        "clickHandlerFunc": function() {
+                            open_img1();
+                        }
+                    },
+            ]
+          },
+          "odnoet_cott_spalna": {
+            "title": "Спальня",
+            "type": "equirectangular",
+            "panorama": "/images/cott/1et_spalna.jpg",
+            "haov": 360,
+            "vaov": 180,
+            "hfov": 120,
+            "autoLoad": true,
+            "hotSpotDebug": true,
+            "hotSpots": [
+                    {
+                        "pitch": -3,
+                        "yaw": 119,
+                        "type": "scene",
+                        "text": "Холл",
+                        "sceneId": "odnoet_cott",
+                        "cssClass": "pan_hotspot"
+                    }
+            ]
+          },
+          "odnoet_cott_toilet": {
+            "title": "Туалет",
+            "type": "equirectangular",
+            "panorama": "/images/cott/1et_toilet.jpg",
+            "haov": 360,
+            "vaov": 180,
+            "hfov": 120,
+            "autoLoad": true,
+            "hotSpotDebug": true,
+            "hotSpots": [
+                    {
+                        "pitch": -11,
+                        "yaw": -4,
+                        "type": "scene",
+                        "text": "Холл",
+                        "sceneId": "odnoet_cott",
+                        "cssClass": "pan_hotspot"
+                    }
+            ]
+          },
+
+
+          "dvuxet_cott": {
+            "title": "Двухэтажный коттедж",
             "type": "equirectangular",
             "panorama": "/images/pano/cottedgi.jpg",
             "haov": 360,
@@ -205,6 +347,7 @@ pageDescription = "Awesome site";
             "hfov": 120,
             "autoLoad": true
           },
+
           "parking": {
             "title": "Вид на парковку",
             "type": "equirectangular",
@@ -413,5 +556,5 @@ pageDescription = "Awesome site";
     
     });
     </script>
-    
+
 <% include _footer %>
