@@ -66,7 +66,7 @@
 <script>
     viewer = pannellum.viewer('panorama', {
         "default": {
-          "firstScene": "odnoet_cott_gostinnaia",
+          "firstScene": "dvuxet_cott",
         //   "author": "Ivan Storchack",
           "sceneFadeDuration": 1000
         },
@@ -250,6 +250,8 @@
             "hfov": 120,
             "autoLoad": true
           },
+
+        //   Коттеджи
           "cottedgi": {
             "title": "Вид на коттеджи",
             "type": "equirectangular",
@@ -397,11 +399,154 @@
           "dvuxet_cott": {
             "title": "Двухэтажный коттедж",
             "type": "equirectangular",
-            "panorama": "/images/pano/cottedgi.jpg",
+            "panorama": "/images/cott/2et_holl.jpg",
             "haov": 360,
             "vaov": 180,
             "hfov": 120,
-            "autoLoad": true
+            "autoLoad": true,
+            "hotSpotDebug": true,
+            "hotSpots": [
+                    {
+                        "pitch": -14,
+                        "yaw": -47,
+                        "type": "scene",
+                        "text": "Гостинная",
+                        "sceneId": "dvuxet_cott_gostinnaia",
+                        "cssClass": "pan_hotspot"
+                    },
+                    {
+                        "pitch": -6,
+                        "yaw": 35,
+                        "type": "scene",
+                        "text": "Спальня",
+                        "sceneId": "dvuxet_cott_spalna",
+                        "cssClass": "pan_hotspot"
+                    },
+                    {
+                        "pitch": -9,
+                        "yaw": 70,
+                        "type": "scene",
+                        "text": "Туалет",
+                        "sceneId": "dvuxet_cott_toilet",
+                        "cssClass": "pan_hotspot"
+                    },
+                    {
+                        "pitch": -4,
+                        "yaw": 154,
+                        "type": "scene",
+                        "text": "Спалня на втором этаже",
+                        "sceneId": "dvuxet_cott_spalna2",
+                        "cssClass": "pan_hotspot"
+                    },
+                    {
+                        "pitch": -8,
+                        "yaw": -146,
+                        "type": "scene",
+                        "text": "Обзорный вид на коттеджи",
+                        "sceneId": "cottedgi",
+                        "cssClass": "pan_hotspot"
+                    },
+            ]
+          },
+          "dvuxet_cott_gostinnaia": {
+            "title": "Гостинная",
+            "type": "equirectangular",
+            "panorama": "/images/cott/2et_gostinnaia.jpg",
+            "haov": 360,
+            "vaov": 180,
+            "hfov": 120,
+            "autoLoad": true,
+            "hotSpotDebug": true,
+            "hotSpots": [
+                    {
+                        "pitch": -9,
+                        "yaw": 142,
+                        "type": "scene",
+                        "text": "Холл",
+                        "sceneId": "dvuxet_cott",
+                        "cssClass": "pan_hotspot"
+                    },
+                    {
+                        "pitch": 1,
+                        "yaw": 31,
+                        "text": "Балкон",
+                        "type": "info",
+                        "cssClass": "photo_hotspot",
+                        "clickHandlerFunc": function() {
+                            open_img1();
+                        }
+                    },
+            ]
+          },
+          "dvuxet_cott_spalna": {
+            "title": "Спальня",
+            "type": "equirectangular",
+            "panorama": "/images/cott/2et_spalna_1et.jpg",
+            "haov": 360,
+            "vaov": 180,
+            "hfov": 120,
+            "autoLoad": true,
+            "hotSpotDebug": true,
+            "hotSpots": [
+                    {
+                        "pitch": -10,
+                        "yaw": -113,
+                        "type": "scene",
+                        "text": "Холл",
+                        "sceneId": "dvuxet_cott",
+                        "cssClass": "pan_hotspot"
+                    }
+            ]
+          },
+          "dvuxet_cott_spalna2": {
+            "title": "Спальня на втором этаже",
+            "type": "equirectangular",
+            "panorama": "/images/cott/2et_spalna_2et.jpg",
+            "haov": 360,
+            "vaov": 180,
+            "hfov": 120,
+            "autoLoad": true,
+            "hotSpotDebug": true,
+            "hotSpots": [
+                    {
+                        "pitch": -6,
+                        "yaw": -66,
+                        "type": "scene",
+                        "text": "Холл",
+                        "sceneId": "dvuxet_cott",
+                        "cssClass": "pan_hotspot"
+                    },
+                    {
+                        "pitch": -5,
+                        "yaw": -51,
+                        "text": "Дополнительные фото",
+                        "type": "info",
+                        "cssClass": "photo_hotspot",
+                        "clickHandlerFunc": function() {
+                            open_img1();
+                        }
+                    },
+            ]
+          },
+          "dvuxet_cott_toilet": {
+            "title": "Туалет",
+            "type": "equirectangular",
+            "panorama": "/images/cott/2et_toilet.jpg",
+            "haov": 360,
+            "vaov": 180,
+            "hfov": 120,
+            "autoLoad": true,
+            "hotSpotDebug": true,
+            "hotSpots": [
+                    {
+                        "pitch": -12,
+                        "yaw": -64,
+                        "type": "scene",
+                        "text": "Холл",
+                        "sceneId": "dvuxet_cott",
+                        "cssClass": "pan_hotspot"
+                    }
+            ]
           },
 
           "parking": {
