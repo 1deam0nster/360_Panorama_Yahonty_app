@@ -403,6 +403,216 @@ function open_img_congholl2() {
   ]);
 }
 
+function open_img_1c1316() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/1corp/1.jpg',
+		},
+		{
+      src  : 'images/photo/1corp/2.jpg',
+		},
+		{
+      src  : 'images/photo/1corp/3.jpg',
+		},
+		{
+      src  : 'images/photo/1corp/4.jpg',
+		}
+  ]);
+}
+
+function open_img_1c1202() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/1corp/5.jpg',
+		}
+  ]);
+}
+
+function open_img_1c1101() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/1corp/6.jpg',
+		}
+  ]);
+}
+
+
+
+
+function open_img_2c2101() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/2corp/1.jpg',
+		}
+  ]);
+}
+
+function open_img_2c2102() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/2corp/2.jpg',
+		}
+  ]);
+}
+
+function open_img_2c2200() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/2corp/3.jpg',
+		},
+		{
+      src  : 'images/photo/2corp/4.jpg',
+		},
+		{
+      src  : 'images/photo/2corp/5.jpg',
+		},
+		{
+      src  : 'images/photo/2corp/6.jpg',
+		},
+		{
+      src  : 'images/photo/2corp/7.jpg',
+		},
+		{
+      src  : 'images/photo/2corp/8.jpg',
+		},
+		{
+      src  : 'images/photo/2corp/9.jpg',
+		},
+  ]);
+}
+
+function open_img_gl3204() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/glcorp/1.jpg',
+		},
+		{
+      src  : 'images/photo/glcorp/2.jpg',
+		}
+  ]);
+}
+
+function open_img_gl3215() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/glcorp/3.jpg',
+		}
+  ]);
+}
+
+function open_img_4c4124() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/4corp/1.jpg',
+		},
+		{
+      src  : 'images/photo/4corp/2.jpg',
+		}
+  ]);
+}
+
+function open_img_4c4303() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/4corp/3.jpg',
+		}
+  ]);
+}
+
+function open_img_1cott() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/35.jpg',
+		},
+		{
+      src  : 'images/photo/34.jpg',
+		},
+		{
+      src  : 'images/photo/33.jpg',
+		},
+		{
+      src  : 'images/photo/32.jpg',
+		}
+  ]);
+}
+
+function open_img_2cott() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/31.jpg',
+		},
+		{
+      src  : 'images/photo/30.jpg',
+		},
+		{
+      src  : 'images/photo/29.jpg',
+		}
+  ]);
+}
+
+function open_img_apt9() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/apt/1.jpg',
+		},
+		{
+      src  : 'images/photo/apt/2.jpg',
+		}
+  ]);
+}
+
+
+
+function open_img_apt33() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/apt/3.jpg',
+		},
+		{
+      src  : 'images/photo/apt/4.jpg',
+		}
+  ]);
+}
+
+function open_img_apt35() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/apt/5.jpg',
+		},
+		{
+      src  : 'images/photo/apt/6.jpg',
+		}
+  ]);
+}
+
+function open_img_apt42() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/apt/7.jpg',
+		},
+		{
+      src  : 'images/photo/apt/8.jpg',
+		}
+
+  ]);
+}
+
+function open_img_apt51() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/apt/9.jpg',
+		},
+		{
+      src  : 'images/photo/apt/10.jpg',
+		},
+		{
+      src  : 'images/photo/apt/11.jpg',
+		},
+
+  ]);
+}
+
+
 function open_img2() {
   $.fancybox.open([
     {
