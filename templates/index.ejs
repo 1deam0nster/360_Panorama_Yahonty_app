@@ -10,7 +10,7 @@ pageDescription = "VR тур Яхонты Ногинск";
             <script>
                 viewer = pannellum.viewer('panorama', {
                     "default": {
-                        "firstScene": "restoran",
+                        "firstScene": "bath",
                         //   "author": "Ivan Storchack",
                         "sceneFadeDuration": 1000
                     },
@@ -28,6 +28,14 @@ pageDescription = "VR тур Яхонты Ногинск";
                             "hfov": 120,
                             "hotSpotDebug": true,
                             "hotSpots": [
+                                {
+                                    "pitch": -4,
+                                    "yaw": 125,
+                                    "type": "scene",
+                                    "text": "Бани",
+                                    "sceneId": "bath",
+                                    "cssClass": "pan_hotspot"
+                                },
                                 {
                                     "pitch": -30,
                                     "yaw": -178,
@@ -202,6 +210,130 @@ pageDescription = "VR тур Яхонты Ногинск";
                             "hfov": 120,
                             "autoLoad": true
                         },
+
+
+                        //   Бани
+                        "bath": {
+                            "title": "Бани",
+                            "type": "equirectangular",
+                            "panorama": "/images/bath/bath.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -2,
+                                    "yaw": 61,
+                                    "type": "scene",
+                                    "text": "Парилка и бассейн",
+                                    "sceneId": "bath_bass",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -2,
+                                    "yaw": 7,
+                                    "type": "scene",
+                                    "text": "Выход",
+                                    "sceneId": "sky",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -2,
+                                    "yaw": -2,
+                                    "type": "scene",
+                                    "text": "Спальня второго этажа",
+                                    "sceneId": "bath_2et",
+                                    "cssClass": "pan_hotspot"
+                                }
+                            ]
+                        },
+                        "bath_bass": {
+                            "title": "Парилка и бассейн",
+                            "type": "equirectangular",
+                            "panorama": "/images/bath/bath_bass.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -4,
+                                    "yaw": 129,
+                                    "type": "scene",
+                                    "text": "Лесное озеро",
+                                    "sceneId": "ozero2",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -3,
+                                    "yaw": -143,
+                                    "type": "scene",
+                                    "text": "Комната отдыха",
+                                    "sceneId": "bath",
+                                    "cssClass": "pan_hotspot"
+                                },
+                            ]
+                        },
+                        "bath_2et": {
+                            "title": "Спальня второго этажа",
+                            "type": "equirectangular",
+                            "panorama": "/images/bath/bath_2et.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -4,
+                                    "yaw": -89,
+                                    "type": "scene",
+                                    "text": "Комната отдыха",
+                                    "sceneId": "bath",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -4,
+                                    "yaw": -96,
+                                    "type": "scene",
+                                    "text": "Маленькая спальня",
+                                    "sceneId": "bath_2et_sp",
+                                    "cssClass": "pan_hotspot"
+                                },
+                            ]
+                        },
+                        "bath_2et_sp": {
+                            "title": "Спальня второго этажа",
+                            "type": "equirectangular",
+                            "panorama": "/images/bath/bath_2et_sp.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -3,
+                                    "yaw": -176,
+                                    "type": "scene",
+                                    "text": "Комната отдыха",
+                                    "sceneId": "bath",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -3,
+                                    "yaw": -171,
+                                    "type": "scene",
+                                    "text": "Большая спальня",
+                                    "sceneId": "bath_2et",
+                                    "cssClass": "pan_hotspot"
+                                },
+                            ]
+                        },
+
                         //   Центральная площадь
                         "centr_pl": {
                             "title": "Центральная площадь",
@@ -1039,7 +1171,26 @@ pageDescription = "VR тур Яхонты Ногинск";
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
-                            "autoLoad": true
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -7,
+                                    "yaw": -166,
+                                    "type": "scene",
+                                    "text": "Бани",
+                                    "sceneId": "bath",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -5,
+                                    "yaw": -161,
+                                    "type": "scene",
+                                    "text": "Ресепшн",
+                                    "sceneId": "gl_corp",
+                                    "cssClass": "pan_hotspot"
+                                }
+                            ]
                         },
                         "ozero": {
                             "title": "Вид на озеро",
@@ -1057,7 +1208,18 @@ pageDescription = "VR тур Яхонты Ногинск";
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
-                            "autoLoad": true
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -4,
+                                    "yaw": -111,
+                                    "type": "scene",
+                                    "text": "Бани",
+                                    "sceneId": "bath",
+                                    "cssClass": "pan_hotspot"
+                                },
+                            ]
                         },
 
 
