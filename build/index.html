@@ -66,7 +66,7 @@
             <script>
                 viewer = pannellum.viewer('panorama', {
                     "default": {
-                        "firstScene": "second_corp",
+                        "firstScene": "restoran",
                         //   "author": "Ivan Storchack",
                         "sceneFadeDuration": 1000
                     },
@@ -1712,6 +1712,12 @@
                                 }
                             ]
                         },
+
+
+
+
+
+
                         "2205": {
                             "title": "2205",
                             "type": "equirectangular",
@@ -1760,10 +1766,6 @@
                                 }
                             ]
                         },
-
-
-
-
 
 
 
@@ -2119,7 +2121,6 @@
                             "vaov": 180,
                             "hfov": 120,
                             "autoLoad": true,                            
-                            "hotSpotDebug": true,
                             "hotSpots": [
                                 {
                                     "pitch": -9,
@@ -2151,14 +2152,189 @@
 
                         // Ресторан
                         "restoran": {
-                            "title": "Вид на ресторан",
+                            "title": "Ресторан",
                             "type": "equirectangular",
                             "panorama": "/images/pano/restoran.jpg",
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
-                            "autoLoad": true
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -2,
+                                    "yaw": 130,
+                                    "type": "scene",
+                                    "text": "Ресторан",
+                                    "sceneId": "resto_holl",
+                                    "cssClass": "pan_hotspot"
+                                }
+                            ]
                         },
+                        "resto_holl": {
+                            "title": "Вид на ресторан",
+                            "type": "equirectangular",
+                            "panorama": "/images/resto/resto_holl.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -3,
+                                    "yaw": 167,
+                                    "type": "scene",
+                                    "text": "Караоке бар и бильярд",
+                                    "sceneId": "resto_bar",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": 7,
+                                    "yaw": -51,
+                                    "type": "scene",
+                                    "text": "Ресторан",
+                                    "sceneId": "resto_1zal",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -3,
+                                    "yaw": -138,
+                                    "type": "scene",
+                                    "text": "Выход",
+                                    "sceneId": "restoran",
+                                    "cssClass": "pan_hotspot"
+                                },
+
+                            ]
+                        },
+                        "resto_1zal": {
+                            "title": "Ресторан первый зал",
+                            "type": "equirectangular",
+                            "panorama": "/images/resto/resto_1zal.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": 0,
+                                    "yaw": 130,
+                                    "type": "scene",
+                                    "text": "Второй зал",
+                                    "sceneId": "resto_2zal",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": 0,
+                                    "yaw": 43,
+                                    "type": "scene",
+                                    "text": "Веранда",
+                                    "sceneId": "resto_ver",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": 12,
+                                    "yaw": 106,
+                                    "type": "scene",
+                                    "text": "Банкетный зал",
+                                    "sceneId": "resto_3et",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -4,
+                                    "yaw": 70,
+                                    "type": "scene",
+                                    "text": "Спуститься вниз",
+                                    "sceneId": "resto_holl",
+                                    "cssClass": "pan_hotspot"
+                                },
+                            ]
+                        },
+                        "resto_3et": {
+                            "title": "Банкетный зал",
+                            "type": "equirectangular",
+                            "panorama": "/images/resto/resto_3et.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -15,
+                                    "yaw": -129,
+                                    "type": "scene",
+                                    "text": "Ресторан",
+                                    "sceneId": "resto_1zal",
+                                    "cssClass": "pan_hotspot"
+                                }
+                            ]
+                        },
+                        "resto_ver": {
+                            "title": "Веранда",
+                            "type": "equirectangular",
+                            "panorama": "/images/resto/resto_ver.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": 0,
+                                    "yaw": 1,
+                                    "type": "scene",
+                                    "text": "Ресторан",
+                                    "sceneId": "resto_1zal",
+                                    "cssClass": "pan_hotspot"
+                                }
+                            ]
+                        },
+                        "resto_2zal": {
+                            "title": "Второй зал",
+                            "type": "equirectangular",
+                            "panorama": "/images/resto/resto_2zal.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -2,
+                                    "yaw": 171,
+                                    "type": "scene",
+                                    "text": "Первый зал",
+                                    "sceneId": "resto_1zal",
+                                    "cssClass": "pan_hotspot"
+                                }
+                            ]
+                        },
+                        "resto_bar": {
+                            "title": "Караоке бар и бильярд",
+                            "type": "equirectangular",
+                            "panorama": "/images/resto/resto_bar.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": 0,
+                                    "yaw": 99,
+                                    "type": "scene",
+                                    "text": "Выход",
+                                    "sceneId": "resto_holl",
+                                    "cssClass": "pan_hotspot"
+                                }
+                            ]
+                        },
+
+
+
                         "dalni_dvor": {
                             "title": "Вид на концертную площадь",
                             "type": "equirectangular",
