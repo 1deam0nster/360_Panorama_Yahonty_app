@@ -1,46 +1,407 @@
 // Photos modal menu 
-function open_img1() {
+function open_img_bahus() {
   $.fancybox.open([
     {
-      src  : 'https://c1.staticflickr.com/9/8148/29324593462_abebaddc38_k.jpg',
-      opts : {
-        caption : 'First caption',
-        thumb   : 'https://c1.staticflickr.com/9/8148/29324593462_f890687b7a_m.jpg'
-      }
-    },
-    {
-      src  : 'https://c2.staticflickr.com/6/5499/30972532232_051e1dc57e_h.jpg',
-      opts : {
-        caption : 'Second caption',
-        thumb   : 'https://c2.staticflickr.com/6/5499/30972532232_e9a298a0c5_m.jpg'
-      }
+      src  : 'images/photo/1.jpg',
     }
-  ], {
-    loop : false
-  });
+  ]);
+}
+
+function open_img_beatch2() {
+  $.fancybox.open([
+    {
+      src  : 'images/photo/3.jpg',
+    }
+  ]);
+}
+
+function open_img_beatch1() {
+  $.fancybox.open([
+    {
+      src  : 'images/photo/2.jpg',
+    }
+  ]);
+}
+
+function open_img_footbool() {
+  $.fancybox.open([
+    {
+      src  : 'images/photo/4.jpg',
+    }
+  ]);
+}
+
+function open_img_veranda() {
+  $.fancybox.open([
+    {
+      src  : 'images/photo/6.jpg',
+		},
+		{
+      src  : 'images/photo/5.jpg',
+    }
+  ]);
 }
 
 function open_img_zoo() {
   $.fancybox.open([
     {
-      src  : 'images/photo/zoo/2.jpg',
+      src  : 'images/photo/8.jpg',
       opts : {
-        caption : 'First caption',
-        thumb   : 'images/photo/zoo/2.jpg'
+        caption : 'Фасад зоопарка'
       }
     },
     {
-      src  : 'images/photo/zoo/1.jpg',
-      opts : {
-        caption : 'Second caption',
-        thumb   : 'images/photo/zoo/1.jpg'
-      }
+      src  : 'images/photo/7.jpg',
     }
-  ], {
-    loop : false
-  });
+  ]);
 }
 
+function open_img_bath() {
+  $.fancybox.open([
+    {
+      src  : 'images/photo/9.jpg',
+		},
+		{
+      src  : 'images/photo/10.jpg',
+		},
+		{
+      src  : 'images/photo/11.jpg',
+		},
+		{
+      src  : 'images/photo/12.jpg',
+		},
+		{
+      src  : 'images/photo/13.jpg',
+		},
+		{
+      src  : 'images/photo/14.jpg',
+		},
+		{
+      src  : 'images/photo/15.jpg',
+    },
+  ]);
+}
+
+function open_img_fish() {
+  $.fancybox.open([
+    {
+      src  : 'images/photo/16.jpg',
+    }
+  ]);
+}
+
+function open_img_shater() {
+  $.fancybox.open([
+    {
+      src  : 'images/photo/17.jpg',
+    }
+  ]);
+}
+
+function open_img_apt() {
+  $.fancybox.open([
+    {
+      src  : 'images/photo/18.jpg',
+		},
+		{
+      src  : 'images/photo/19.jpg',
+		},
+		{
+      src  : 'images/photo/20.jpg',
+		}
+  ]);
+}
+
+function open_img_restoholl() {
+  $.fancybox.open([
+    {
+      src  : 'images/photo/21.jpg',
+    }
+  ]);
+}
+
+function open_img_restobar() {
+  $.fancybox.open([
+    {
+      src  : 'images/photo/22.jpg',
+		},
+		{
+      src  : 'images/photo/23.jpg',
+		},
+		{
+      src  : 'images/photo/24.jpg',
+		},
+		{
+      src  : 'images/photo/25.jpg',
+		},
+		{
+      src  : 'images/photo/26.jpg',
+		},
+		{
+      src  : 'images/photo/27.jpg',
+		}
+  ]);
+}
+
+
+
+function open_img_restomatr() {
+  $.fancybox.open([
+    {
+      src  : 'images/photo/28.jpg',
+    }
+  ]);
+}
+
+
+function open_img_cott() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/29.jpg',
+		},
+		{
+      src  : 'images/photo/30.jpg',
+		},
+		{
+      src  : 'images/photo/31.jpg',
+		},
+		{
+      src  : 'images/photo/32.jpg',
+		},
+		{
+      src  : 'images/photo/33.jpg',
+		},		
+		{
+      src  : 'images/photo/34.jpg',
+		},
+		{
+      src  : 'images/photo/35.jpg',
+		},
+  ]);
+}
+
+function open_img_bass() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/36.jpg',
+		},
+		{
+      src  : 'images/photo/37.jpg',
+		},
+		{
+      src  : 'images/photo/38.jpg',
+		},
+		{
+      src  : 'images/photo/39.jpg',
+		},
+		{
+      src  : 'images/photo/40.jpg',
+		},		
+		{
+      src  : 'images/photo/41.jpg',
+		},
+		{
+      src  : 'images/photo/42.jpg',
+		},
+		{
+      src  : 'images/photo/43.jpg',
+		},
+		{
+      src  : 'images/photo/44.jpg',
+		},
+		{
+      src  : 'images/photo/45.jpg',
+		},
+		{
+      src  : 'images/photo/46.jpg',
+		},
+		{
+      src  : 'images/photo/47.jpg',
+		},
+		{
+      src  : 'images/photo/48.jpg',
+		},
+  ]);
+}
+
+function open_img_spa() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/49.jpg',
+		},
+		{
+      src  : 'images/photo/50.jpg',
+		},
+		{
+      src  : 'images/photo/51.jpg',
+		},
+		{
+      src  : 'images/photo/52.jpg',
+		},
+		{
+      src  : 'images/photo/53.jpg',
+		},		
+		{
+      src  : 'images/photo/54.jpg',
+		},
+		{
+      src  : 'images/photo/55.jpg',
+		},
+		{
+      src  : 'images/photo/56.jpg',
+		},
+		{
+      src  : 'images/photo/57.jpg',
+		}
+  ]);
+}
+
+function open_img_fit() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/58.jpg',
+		},
+		{
+      src  : 'images/photo/59.jpg',
+		},
+		{
+      src  : 'images/photo/60.jpg',
+		},
+		{
+      src  : 'images/photo/61.jpg',
+		},
+		{
+      src  : 'images/photo/62.jpg',
+		},		
+		{
+      src  : 'images/photo/63.jpg',
+		},
+		{
+      src  : 'images/photo/64.jpg',
+		},
+  ]);
+}
+
+function open_img_glcorp() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/65.jpg',
+		},
+		{
+      src  : 'images/photo/66.jpg',
+		},
+		{
+      src  : 'images/photo/67.jpg',
+		},
+		{
+      src  : 'images/photo/68.jpg',
+		},
+		{
+      src  : 'images/photo/69.jpg',
+		},		
+		{
+      src  : 'images/photo/70.jpg',
+		},
+		{
+      src  : 'images/photo/71.jpg',
+		},
+  ]);
+}
+
+function open_img_glpertr() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/72.jpg',
+		},
+		{
+      src  : 'images/photo/73.jpg',
+		},
+		{
+      src  : 'images/photo/74.jpg',
+		},
+		{
+      src  : 'images/photo/75.jpg',
+		}
+  ]);
+}
+
+function open_img_4corp() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/76.jpg',
+		},
+		{
+      src  : 'images/photo/77.jpg',
+		},
+		{
+      src  : 'images/photo/78.jpg',
+		},
+		{
+      src  : 'images/photo/79.jpg',
+		},
+		{
+      src  : 'images/photo/80.jpg',
+		},		
+		{
+      src  : 'images/photo/81.jpg',
+		}
+  ]);
+}
+
+function open_img_congholl() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/82.jpg',
+		},
+		{
+      src  : 'images/photo/83.jpg',
+		},
+		{
+      src  : 'images/photo/84.jpg',
+		},
+		{
+      src  : 'images/photo/85.jpg',
+		}
+  ]);
+}
+
+function open_img_congholl2() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/86.jpg',
+		},
+		{
+      src  : 'images/photo/87.jpg',
+		},
+		{
+      src  : 'images/photo/88.jpg',
+		},
+		{
+      src  : 'images/photo/89.jpg',
+		},
+		{
+      src  : 'images/photo/90.jpg',
+		},		
+		{
+      src  : 'images/photo/91.jpg',
+		},
+		{
+      src  : 'images/photo/92.jpg',
+		},
+		{
+      src  : 'images/photo/93.jpg',
+		},
+		{
+      src  : 'images/photo/94.jpg',
+		},
+		{
+      src  : 'images/photo/95.jpg',
+		},
+		{
+      src  : 'images/photo/96.jpg',
+		}
+  ]);
+}
 
 function open_img2() {
   $.fancybox.open([
