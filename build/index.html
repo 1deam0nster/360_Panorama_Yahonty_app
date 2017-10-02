@@ -66,7 +66,7 @@
             <script>
                 viewer = pannellum.viewer('panorama', {
                     "default": {
-                        "firstScene": "gl_corp",
+                        "firstScene": "second_corp",
                         //   "author": "Ivan Storchack",
                         "sceneFadeDuration": 1000
                     },
@@ -104,7 +104,7 @@
                                     "pitch": -19,
                                     "yaw": 137,
                                     "type": "scene",
-                                    "text": "Вид на корпус 2",
+                                    "text": "Второй корпус",
                                     "sceneId": "second_corp",
                                     "cssClass": "pan_hotspot"
                                 },
@@ -112,7 +112,7 @@
                                     "pitch": -12,
                                     "yaw": 120,
                                     "type": "scene",
-                                    "text": "Вид на корпус 1",
+                                    "text": "Первый корпус",
                                     "sceneId": "first_corp",
                                     "cssClass": "pan_hotspot"
                                 },
@@ -120,7 +120,7 @@
                                     "pitch": -9,
                                     "yaw": 125,
                                     "type": "scene",
-                                    "text": "Вид на Конгресс-холл",
+                                    "text": "Конгресс-холл",
                                     "sceneId": "congress_hall",
                                     "cssClass": "pan_hotspot"
                                 },
@@ -128,7 +128,7 @@
                                     "pitch": -5,
                                     "yaw": 119,
                                     "type": "scene",
-                                    "text": "Вид на лесное озеро 1",
+                                    "text": "Лесное озеро 1",
                                     "sceneId": "ozero",
                                     "cssClass": "pan_hotspot"
                                 },
@@ -136,7 +136,7 @@
                                     "pitch": -6,
                                     "yaw": 131,
                                     "type": "scene",
-                                    "text": "Вид на лесное озеро 2",
+                                    "text": "Лесное озеро 2",
                                     "sceneId": "ozero2",
                                     "cssClass": "pan_hotspot"
                                 },
@@ -144,7 +144,7 @@
                                     "pitch": -4,
                                     "yaw": 108,
                                     "type": "scene",
-                                    "text": "Вид на парковку",
+                                    "text": "Парковка",
                                     "sceneId": "parking",
                                     "cssClass": "pan_hotspot"
                                 },
@@ -152,7 +152,7 @@
                                     "pitch": -8,
                                     "yaw": 91,
                                     "type": "scene",
-                                    "text": "Вид на котеджи",
+                                    "text": "Коттеджи",
                                     "sceneId": "cottedgi",
                                     "cssClass": "pan_hotspot"
                                 },
@@ -160,7 +160,7 @@
                                     "pitch": -8,
                                     "yaw": 59,
                                     "type": "scene",
-                                    "text": "Вид на коттеджи",
+                                    "text": "Апартаменты",
                                     "sceneId": "apt",
                                     "cssClass": "pan_hotspot"
                                 },
@@ -175,7 +175,7 @@
                                 {
                                     "pitch": -14,
                                     "yaw": 107,
-                                    "text": "Вид на пляж",
+                                    "text": "Пляж",
                                     "type": "info",
                                     "cssClass": "photo_hotspot",
                                     "clickHandlerFunc": function () {
@@ -186,7 +186,7 @@
                                 {
                                     "pitch": -13,
                                     "yaw": 70,
-                                    "text": "Вид на футбольное поле",
+                                    "text": "Футбольное поле",
                                     "type": "info",
                                     "cssClass": "photo_hotspot",
                                     "clickHandlerFunc": function () {
@@ -273,7 +273,7 @@
                                     "pitch": -27,
                                     "yaw": -129,
                                     "type": "scene",
-                                    "text": "4124",
+                                    "text": "Четвертый корпус 4124",
                                     "sceneId": "4124",
                                     "cssClass": "pan_hotspot"
                                 },
@@ -281,7 +281,7 @@
                                     "pitch": -21,
                                     "yaw": -129,
                                     "type": "scene",
-                                    "text": "4303",
+                                    "text": "Четвертый корпус 4303",
                                     "sceneId": "4303",
                                     "cssClass": "pan_hotspot"
                                 },
@@ -684,25 +684,6 @@
                             ]
                         },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                         "spa": {
                             "title": "SPA",
                             "type": "equirectangular",
@@ -768,23 +749,45 @@
 
                         //   Центральная площадь номера
                         "4124": {
-                            "title": "4124",
+                            "title": "Четвертый корпус 4124",
                             "type": "equirectangular",
                             "panorama": "/images/centr_pl/4124.jpg",
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
-                            "autoLoad": true
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -6,
+                                    "yaw": 169,
+                                    "type": "scene",
+                                    "text": "Выход",
+                                    "sceneId": "gl_corp",
+                                    "cssClass": "pan_hotspot"
+                                },
+                            ]
                         },
 
                         "4303": {
-                            "title": "4303",
+                            "title": "Четвертый корпус 4303",
                             "type": "equirectangular",
-                            "panorama": "/images/centr_pl/4124.jpg",
+                            "panorama": "/images/centr_pl/4303.jpg",
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
-                            "autoLoad": true
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -5,
+                                    "yaw": -132,
+                                    "type": "scene",
+                                    "text": "Выход",
+                                    "sceneId": "gl_corp",
+                                    "cssClass": "pan_hotspot"
+                                },
+                            ]
                         },
 
                         //   Коттеджи
@@ -1222,8 +1225,10 @@
                                 },
                             ]
                         },
+
+                        // Первый корпус 
                         "first_corp": {
-                            "title": "Вид на корпус 1",
+                            "title": "Первый корпус",
                             "type": "equirectangular",
                             "panorama": "/images/pano/first_corp.jpg",
                             "haov": 360,
@@ -1232,6 +1237,14 @@
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
+                                {
+                                    "pitch": -5,
+                                    "yaw": -37,
+                                    "type": "scene",
+                                    "text": "1101",
+                                    "sceneId": "1101",
+                                    "cssClass": "pan_hotspot"
+                                },
                                 {
                                     "pitch": 0,
                                     "yaw": -37,
@@ -1244,28 +1257,393 @@
                                     "pitch": 5,
                                     "yaw": -37,
                                     "type": "scene",
-                                    "text": "1306",
-                                    "sceneId": "1306",
+                                    "text": "1316",
+                                    "sceneId": "1316",
                                     "cssClass": "pan_hotspot"
                                 },
                                 {
                                     "pitch": 10,
                                     "yaw": -37,
                                     "type": "scene",
-                                    "text": "1202_2",
-                                    "sceneId": "1202_2",
+                                    "text": "1200",
+                                    "sceneId": "1200_holl",
                                     "cssClass": "pan_hotspot"
                                 },
                                 {
                                     "pitch": 15,
                                     "yaw": -37,
                                     "type": "scene",
-                                    "text": "1202_3",
-                                    "sceneId": "1202_3",
+                                    "text": "1305",
+                                    "sceneId": "1305",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": 3,
+                                    "yaw": 38,
+                                    "type": "scene",
+                                    "text": "Второй корпус",
+                                    "sceneId": "second_corp",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": 0,
+                                    "yaw": -143,
+                                    "type": "scene",
+                                    "text": "Главный корпус",
+                                    "sceneId": "centr_pl",
                                     "cssClass": "pan_hotspot"
                                 },
                             ]
                         },
+
+                        "1305": {
+                            "title": "1305",
+                            "type": "equirectangular",
+                            "panorama": "/images/first_corp/1305.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -5,
+                                    "yaw": -140,
+                                    "type": "scene",
+                                    "text": "Туалет",
+                                    "sceneId": "1305_toilet",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -5,
+                                    "yaw": -151,
+                                    "type": "scene",
+                                    "text": "Выход",
+                                    "sceneId": "first_corp",
+                                    "cssClass": "pan_hotspot"
+                                }
+                            ]
+                        },
+
+                        "1305_toilet": {
+                            "title": "Туалет",
+                            "type": "equirectangular",
+                            "panorama": "/images/first_corp/1305_toilet.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -2,
+                                    "yaw": -172,
+                                    "type": "scene",
+                                    "text": "Выход",
+                                    "sceneId": "1305",
+                                    "cssClass": "pan_hotspot"
+                                }
+                            ]
+                        },
+
+
+
+
+                        "1200_holl": {
+                            "title": "1200",
+                            "type": "equirectangular",
+                            "panorama": "/images/first_corp/1200_holl.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -15,
+                                    "yaw": 111,
+                                    "type": "scene",
+                                    "text": "Туалет",
+                                    "sceneId": "1200_toilet",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -9,
+                                    "yaw": 172,
+                                    "type": "scene",
+                                    "text": "Спальня",
+                                    "sceneId": "1200_gost",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -11,
+                                    "yaw": -2,
+                                    "type": "scene",
+                                    "text": "Комната с джакузи",
+                                    "sceneId": "1200_jack",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -11,
+                                    "yaw": -78,
+                                    "type": "scene",
+                                    "text": "Выход",
+                                    "sceneId": "first_corp",
+                                    "cssClass": "pan_hotspot"
+                                }
+                            ]
+                        },
+                        "1200_toilet": {
+                            "title": "1200",
+                            "type": "equirectangular",
+                            "panorama": "/images/first_corp/1200_toilet.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -15,
+                                    "yaw": 102,
+                                    "type": "scene",
+                                    "text": "Выход",
+                                    "sceneId": "1200_holl",
+                                    "cssClass": "pan_hotspot"
+                                }
+                            ]
+                        },
+                        "1200_jack": {
+                            "title": "Комната с джакузи",
+                            "type": "equirectangular",
+                            "panorama": "/images/first_corp/1200_jack.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -9,
+                                    "yaw": -140,
+                                    "type": "scene",
+                                    "text": "Холл",
+                                    "sceneId": "1200_holl",
+                                    "cssClass": "pan_hotspot"
+                                }
+                            ]
+                        },
+                        "1200_gost": {
+                            "title": "1200",
+                            "type": "equirectangular",
+                            "panorama": "/images/first_corp/1200_gost.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -1,
+                                    "yaw": -4,
+                                    "type": "scene",
+                                    "text": "Холл",
+                                    "sceneId": "1200_holl",
+                                    "cssClass": "pan_hotspot"
+                                }
+                            ]
+                        },
+
+
+
+
+                        "1316": {
+                            "title": "1316",
+                            "type": "equirectangular",
+                            "panorama": "/images/first_corp/1316_1.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -3,
+                                    "yaw": 35,
+                                    "type": "scene",
+                                    "text": "Вторая комната",
+                                    "sceneId": "1316_2",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -4,
+                                    "yaw": 8,
+                                    "type": "scene",
+                                    "text": "Выход",
+                                    "sceneId": "first_corp",
+                                    "cssClass": "pan_hotspot"
+                                }
+                            ]
+                        },
+
+                        "1316_2": {
+                            "title": "Вторая комната",
+                            "type": "equirectangular",
+                            "panorama": "/images/first_corp/1316_2.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -4,
+                                    "yaw": 159,
+                                    "type": "scene",
+                                    "text": "Выход",
+                                    "sceneId": "1316",
+                                    "cssClass": "pan_hotspot"
+                                }
+                            ]
+                        },
+
+
+
+
+                        "1101": {
+                            "title": "1101",
+                            "type": "equirectangular",
+                            "panorama": "/images/first_corp/1101.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -8,
+                                    "yaw": -77,
+                                    "type": "scene",
+                                    "text": "Холл",
+                                    "sceneId": "1101_holl",
+                                    "cssClass": "pan_hotspot"
+                                }
+                            ]
+                        },
+                        "1101_toilet": {
+                            "title": "Туалет",
+                            "type": "equirectangular",
+                            "panorama": "/images/first_corp/1101_toilet.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -14,
+                                    "yaw": -78,
+                                    "type": "scene",
+                                    "text": "Холл",
+                                    "sceneId": "1101_holl",
+                                    "cssClass": "pan_hotspot"
+                                }
+                            ]
+                        },
+                        "1101_holl": {
+                            "title": "Холл",
+                            "type": "equirectangular",
+                            "panorama": "/images/first_corp/1101_holl.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -6,
+                                    "yaw": -14,
+                                    "type": "scene",
+                                    "text": "Комната",
+                                    "sceneId": "1101",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -11,
+                                    "yaw": -101,
+                                    "type": "scene",
+                                    "text": "Выход",
+                                    "sceneId": "first_corp",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -7,
+                                    "yaw": 61,
+                                    "type": "scene",
+                                    "text": "Туалет",
+                                    "sceneId": "1101_toilet",
+                                    "cssClass": "pan_hotspot"
+                                },
+                            ]
+                        },
+
+
+
+                        "1202": {
+                            "title": "1202",
+                            "type": "equirectangular",
+                            "panorama": "/images/first_corp/1202.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -9,
+                                    "yaw": -89,
+                                    "type": "scene",
+                                    "text": "Туалет",
+                                    "sceneId": "1202_toilet",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -7,
+                                    "yaw": -117,
+                                    "type": "scene",
+                                    "text": "Выход",
+                                    "sceneId": "first_corp",
+                                    "cssClass": "pan_hotspot"
+                                }
+                            ]
+                        },
+                        "1202_toilet": {
+                            "title": "Туалет",
+                            "type": "equirectangular",
+                            "panorama": "/images/first_corp/1202_toilet.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -10,
+                                    "yaw": -148,
+                                    "type": "scene",
+                                    "text": "Выход",
+                                    "sceneId": "1202",
+                                    "cssClass": "pan_hotspot"
+                                }
+                            ]
+                        },
+
+
+
+
+
+
+                        // Второй корпус
                         "second_corp": {
                             "title": "Вид на корпус 2",
                             "type": "equirectangular",
