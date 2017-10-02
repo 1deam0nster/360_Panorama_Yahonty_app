@@ -20,6 +20,27 @@ function open_img1() {
   });
 }
 
+function open_img_zoo() {
+  $.fancybox.open([
+    {
+      src  : 'images/photo/zoo/2.jpg',
+      opts : {
+        caption : 'First caption',
+        thumb   : 'images/photo/zoo/2.jpg'
+      }
+    },
+    {
+      src  : 'images/photo/zoo/1.jpg',
+      opts : {
+        caption : 'Second caption',
+        thumb   : 'images/photo/zoo/1.jpg'
+      }
+    }
+  ], {
+    loop : false
+  });
+}
+
 
 function open_img2() {
   $.fancybox.open([
