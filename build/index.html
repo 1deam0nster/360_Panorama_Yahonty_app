@@ -66,7 +66,7 @@
             <script>
                 viewer = pannellum.viewer('panorama', {
                     "default": {
-                        "firstScene": "bath",
+                        "firstScene": "sky",
                         //   "author": "Ivan Storchack",
                         "sceneFadeDuration": 1000
                     },
@@ -257,14 +257,417 @@
                                 },
                             ]
                         },
+
+                        //  Апартаменты
                         "apt": {
-                            "title": "Вид на апартаменты",
+                            "title": "Апартаменты",
                             "type": "equirectangular",
                             "panorama": "/images/pano/apt.jpg",
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
-                            "autoLoad": true
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -15,
+                                    "yaw": -100,
+                                    "type": "scene",
+                                    "text": "9",
+                                    "sceneId": "9",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -10,
+                                    "yaw": -100,
+                                    "type": "scene",
+                                    "text": "33",
+                                    "sceneId": "33",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -14,
+                                    "yaw": -76,
+                                    "type": "scene",
+                                    "text": "35",
+                                    "sceneId": "35",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -12,
+                                    "yaw": -57,
+                                    "type": "scene",
+                                    "text": "42",
+                                    "sceneId": "42",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -7,
+                                    "yaw": -57,
+                                    "type": "scene",
+                                    "text": "51",
+                                    "sceneId": "51",
+                                    "cssClass": "pan_hotspot"
+                                },
+                            ]
+                        },
+
+                        "51": {
+                            "title": "51",
+                            "type": "equirectangular",
+                            "panorama": "/images/apt/51.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": 0,
+                                    "yaw": 18,
+                                    "type": "scene",
+                                    "text": "Выход",
+                                    "sceneId": "apt",
+                                    "cssClass": "pan_hotspot"
+                                },
+                            ]
+                        },
+
+
+
+
+
+                        "42": {
+                            "title": "42",
+                            "type": "equirectangular",
+                            "panorama": "/images/apt/42.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -3,
+                                    "yaw": 146,
+                                    "type": "scene",
+                                    "text": "Туалет",
+                                    "sceneId": "42_toilet",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -1,
+                                    "yaw": 42,
+                                    "type": "scene",
+                                    "text": "Спальня",
+                                    "sceneId": "42_sp",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -2,
+                                    "yaw": 113,
+                                    "type": "scene",
+                                    "text": "Выход",
+                                    "sceneId": "apt",
+                                    "cssClass": "pan_hotspot"
+                                },
+                            ]
+                        },
+
+                        "42_toilet": {
+                            "title": "Туалет",
+                            "type": "equirectangular",
+                            "panorama": "/images/apt/42_toilet.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -14,
+                                    "yaw": 123,
+                                    "type": "scene",
+                                    "text": "выход",
+                                    "sceneId": "42",
+                                    "cssClass": "pan_hotspot"
+                                },
+                            ]
+                        },
+
+                        "42_sp": {
+                            "title": "Спальня",
+                            "type": "equirectangular",
+                            "panorama": "/images/apt/42_sp.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -2,
+                                    "yaw": -126,
+                                    "type": "scene",
+                                    "text": "Комната",
+                                    "sceneId": "42",
+                                    "cssClass": "pan_hotspot"
+                                },
+                            ]
+                        },
+
+
+
+
+
+
+
+
+
+                        "35": {
+                            "title": "35",
+                            "type": "equirectangular",
+                            "panorama": "/images/apt/35.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -3,
+                                    "yaw": 179,
+                                    "type": "scene",
+                                    "text": "Холл",
+                                    "sceneId": "35_holl",
+                                    "cssClass": "pan_hotspot"
+                                },
+                            ]
+                        },
+
+                        "35_toilet": {
+                            "title": "Туалет",
+                            "type": "equirectangular",
+                            "panorama": "/images/apt/35_toilet.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -4,
+                                    "yaw": -39,
+                                    "type": "scene",
+                                    "text": "выход",
+                                    "sceneId": "35",
+                                    "cssClass": "pan_hotspot"
+                                },
+                            ]
+                        },
+
+                        "35_sp": {
+                            "title": "Спальня",
+                            "type": "equirectangular",
+                            "panorama": "/images/apt/35_sp.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -3,
+                                    "yaw": -109,
+                                    "type": "scene",
+                                    "text": "Холл",
+                                    "sceneId": "35",
+                                    "cssClass": "pan_hotspot"
+                                },
+                            ]
+                        },
+
+                        "35_holl": {
+                            "title": "Холл",
+                            "type": "equirectangular",
+                            "panorama": "/images/apt/35_holl.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -14,
+                                    "yaw": 23,
+                                    "type": "scene",
+                                    "text": "Спальня",
+                                    "sceneId": "35_sp",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -12,
+                                    "yaw": -59,
+                                    "type": "scene",
+                                    "text": "Гостинная",
+                                    "sceneId": "35",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -12,
+                                    "yaw": -101,
+                                    "type": "scene",
+                                    "text": "Туалет",
+                                    "sceneId": "35_toilet",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -6,
+                                    "yaw": 155,
+                                    "type": "scene",
+                                    "text": "Выход",
+                                    "sceneId": "apt",
+                                    "cssClass": "pan_hotspot"
+                                },
+                            ]
+                        },
+
+
+
+
+
+
+
+                        "9": {
+                            "title": "9",
+                            "type": "equirectangular",
+                            "panorama": "/images/apt/9.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -3,
+                                    "yaw": 136,
+                                    "type": "scene",
+                                    "text": "Выход",
+                                    "sceneId": "apt",
+                                    "cssClass": "pan_hotspot"
+                                }
+                            ]
+                        },
+
+
+
+
+                        "33": {
+                            "title": "33",
+                            "type": "equirectangular",
+                            "panorama": "/images/apt/33.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -9,
+                                    "yaw": 161,
+                                    "type": "scene",
+                                    "text": "Холл",
+                                    "sceneId": "33_holl",
+                                    "cssClass": "pan_hotspot"
+                                },
+                            ]
+                        },
+
+                        "33_toilet": {
+                            "title": "Туалет",
+                            "type": "equirectangular",
+                            "panorama": "/images/apt/33_toilet.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -5,
+                                    "yaw": -177,
+                                    "type": "scene",
+                                    "text": "выход",
+                                    "sceneId": "33",
+                                    "cssClass": "pan_hotspot"
+                                },
+                            ]
+                        },
+
+                        "33_sp": {
+                            "title": "Спальня",
+                            "type": "equirectangular",
+                            "panorama": "/images/apt/33_sp.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -4,
+                                    "yaw": 68,
+                                    "type": "scene",
+                                    "text": "Холл",
+                                    "sceneId": "33",
+                                    "cssClass": "pan_hotspot"
+                                },
+                            ]
+                        },
+
+                        "33_holl": {
+                            "title": "Холл",
+                            "type": "equirectangular",
+                            "panorama": "/images/apt/33_holl.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -16,
+                                    "yaw": 118,
+                                    "type": "scene",
+                                    "text": "Спальня",
+                                    "sceneId": "33_sp",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -14,
+                                    "yaw": -169,
+                                    "type": "scene",
+                                    "text": "Гостинная",
+                                    "sceneId": "33",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -12,
+                                    "yaw": -101,
+                                    "type": "scene",
+                                    "text": "Туалет",
+                                    "sceneId": "33_toilet",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -5,
+                                    "yaw": -39,
+                                    "type": "scene",
+                                    "text": "Выход",
+                                    "sceneId": "apt",
+                                    "cssClass": "pan_hotspot"
+                                },
+                            ]
                         },
 
 
@@ -475,7 +878,7 @@
                                     "yaw": -40,
                                     "type": "scene",
                                     "text": "Бассейн",
-                                    "sceneId": "4124",
+                                    "sceneId": "bass1",
                                     "cssClass": "pan_hotspot"
                                 },
                                 {
@@ -483,7 +886,7 @@
                                     "yaw": -45,
                                     "type": "scene",
                                     "text": "Фитнес центр",
-                                    "sceneId": "4303",
+                                    "sceneId": "fit",
                                     "cssClass": "pan_hotspot"
                                 },
                                 {
@@ -536,6 +939,89 @@
                                 },
                             ]
                         },
+
+                        "bass1": {
+                            "title": "Бассейн",
+                            "type": "equirectangular",
+                            "panorama": "/images/centr_pl/bass1.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": 4,
+                                    "yaw": 90,
+                                    "type": "scene",
+                                    "text": "Бассейн с горкой",
+                                    "sceneId": "bass2",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": 0,
+                                    "yaw": -178,
+                                    "type": "scene",
+                                    "text": "Выход",
+                                    "sceneId": "gl_corp",
+                                    "cssClass": "pan_hotspot"
+                                }
+                            ]
+                        },
+                        "bass2": {
+                            "title": "Бассейн",
+                            "type": "equirectangular",
+                            "panorama": "/images/centr_pl/bass2.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": 1,
+                                    "yaw": 88,
+                                    "type": "scene",
+                                    "text": "Большой бассейн",
+                                    "sceneId": "bass1",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -1,
+                                    "yaw": 66,
+                                    "type": "scene",
+                                    "text": "Выход",
+                                    "sceneId": "gl_corp",
+                                    "cssClass": "pan_hotspot"
+                                }
+                            ]
+                        },
+
+                        "fit": {
+                            "title": "Фитнес центр",
+                            "type": "equirectangular",
+                            "panorama": "/images/centr_pl/fit.jpg",
+                            "haov": 360,
+                            "vaov": 180,
+                            "hfov": 120,
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -1,
+                                    "yaw": 175,
+                                    "type": "scene",
+                                    "text": "Выход",
+                                    "sceneId": "gl_corp",
+                                    "cssClass": "pan_hotspot"
+                                }
+                            ]
+                        },
+
+
+
+
+
 
                         "gl_hol_2et": {
                             "title": "Холл второго этажа",
@@ -1232,7 +1718,7 @@
                             "hotSpots": [
                                 {
                                     "pitch": -7,
-                                    "yaw": -166,
+                                    "yaw": 166,
                                     "type": "scene",
                                     "text": "Бани",
                                     "sceneId": "bath",
@@ -1242,8 +1728,8 @@
                                     "pitch": -5,
                                     "yaw": -161,
                                     "type": "scene",
-                                    "text": "Ресепшн",
-                                    "sceneId": "gl_corp",
+                                    "text": "Центральная площадь",
+                                    "sceneId": "centr_pl",
                                     "cssClass": "pan_hotspot"
                                 }
                             ]
