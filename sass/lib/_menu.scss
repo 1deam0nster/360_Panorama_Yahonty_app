@@ -39,6 +39,12 @@ $responsive-menu-breakpoint: 1220px !default;
 	}
 }
 
+.sub-menu {
+	li {
+		font-size: 14px;
+	}
+}
+
 .main-menu {
 	& > li {
 		display: inline-block;
@@ -179,11 +185,24 @@ nav {
 			color: #ffffff;
 			text-decoration: none;
 		}
-	}
+		&:hover {
+			color: white;
+			background: #c77915;
+		}
+	}		
+
 	
 	.expand {
 		color: #ffffff;
 		font-size: 1.5rem;
+	}
+}
+
+.sub-menu {
+	li{
+		a{
+			padding: 10px;
+		}
 	}
 }
 

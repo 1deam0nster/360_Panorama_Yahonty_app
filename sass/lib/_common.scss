@@ -2,6 +2,9 @@
 
 $menu: 25px;
 $body: 100%;
+html {
+    overflow:  hidden;  //убираем скролл
+}
 body, html {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background: $bg;
