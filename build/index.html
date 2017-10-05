@@ -32,9 +32,9 @@
 </head>
 <body class="page-index">
         <header>
-
+    
     <nav class="responsive-menu">
-        <a href="#" class="toggle-menu" data-toggle-class="active" data-toggle-target=".main-menu, this"><svg height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M4 10h24c1.104 0 2-.896 2-2s-.896-2-2-2H4c-1.104 0-2 .896-2 2s.896 2 2 2zm24 4H4c-1.104 0-2 .896-2 2s.896 2 2 2h24c1.104 0 2-.896 2-2s-.896-2-2-2zm0 8H4c-1.104 0-2 .896-2 2s.896 2 2 2h24c1.104 0 2-.896 2-2s-.896-2-2-2z" fill="#fff"/></svg><span>Menu</span></a>
+        <a href="#" class="toggle-menu" data-toggle-class="active" data-toggle-target=".main-menu, this"><svg height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M4 10h24c1.104 0 2-.896 2-2s-.896-2-2-2H4c-1.104 0-2 .896-2 2s.896 2 2 2zm24 4H4c-1.104 0-2 .896-2 2s.896 2 2 2h24c1.104 0 2-.896 2-2s-.896-2-2-2zm0 8H4c-1.104 0-2 .896-2 2s.896 2 2 2h24c1.104 0 2-.896 2-2s-.896-2-2-2z" fill="#fff"/></svg><span>МЕНЮ</span></a>
         
         <ul class="main-menu">
             <li><a href="#" onclick="javascript:viewer.loadScene('sky');"><span>Главная</span></a></li>
@@ -320,6 +320,14 @@
                                     "type": "scene",
                                     "text": "51",
                                     "sceneId": "51",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -5,
+                                    "yaw": 98,
+                                    "type": "scene",
+                                    "text": "Коттеджи",
+                                    "sceneId": "cottedgi",
                                     "cssClass": "pan_hotspot"
                                 },
                                 {
@@ -1622,10 +1630,28 @@
                                 },
                                 {
                                     "pitch": -1,
+                                    "yaw": 102,
+                                    "text": "Футбольное поле",
+                                    "type": "info",
+                                    "cssClass": "photo_hotspot",
+                                    "clickHandlerFunc": function () {
+                                        open_img_footbool();
+                                    }
+                                },
+                                {
+                                    "pitch": -1,
                                     "yaw": 8,
                                     "type": "scene",
                                     "text": "Центральная площадь",
                                     "sceneId": "centr_pl",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": 2,
+                                    "yaw": 139,
+                                    "type": "scene",
+                                    "text": "Аппартаменты",
+                                    "sceneId": "apt",
                                     "cssClass": "pan_hotspot"
                                 },
                                 {
@@ -2044,6 +2070,14 @@
                             "autoLoad": true,
                             "hotSpots": [
                                 {
+                                    "pitch": -3,
+                                    "yaw": -165,
+                                    "type": "scene",
+                                    "text": "Выход",
+                                    "sceneId": "congress_hall",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
                                     "pitch": -4,
                                     "yaw": -19,
                                     "type": "scene",
@@ -2131,10 +2165,12 @@
                                 {
                                     "pitch": -3,
                                     "yaw": 58,
-                                    "type": "scene",
                                     "text": "Боулинг",
-                                    "sceneId": "bouling",
-                                    "cssClass": "photo_hotspot"
+                                    "type": "info",
+                                    "cssClass": "photo_hotspot",
+                                    "clickHandlerFunc": function () {
+                                        open_img_bouling();
+                                    }
                                 }
                             ]
                         },
@@ -3167,7 +3203,24 @@
                                     "text": "Ресторан",
                                     "sceneId": "resto_holl",
                                     "cssClass": "pan_hotspot"
-                                }
+                                },
+                                {
+                                    "pitch": 4,
+                                    "yaw": -144,
+                                    "type": "scene",
+                                    "text": "Концертная площадь",
+                                    "sceneId": "dalni_dvor",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -1,
+                                    "yaw": 39,
+                                    "type": "scene",
+                                    "text": "Второй корпус",
+                                    "sceneId": "second_corp",
+                                    "cssClass": "pan_hotspot"
+                                },
+
                             ]
                         },
                         "resto_holl": {
@@ -3374,7 +3427,46 @@
                             "hfov": 120,
                             "minHfov" : 90,
                             "maxHfov" : 120,
-                            "autoLoad": true
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -17,
+                                    "yaw": -37,
+                                    "text": "Вид на бахус хол",
+                                    "type": "info",
+                                    "cssClass": "photo_hotspot",
+                                    "clickHandlerFunc": function () {
+                                        open_img_bahus();
+                                    }
+                                },
+                                {
+                                    "pitch": -20,
+                                    "yaw": 60,
+                                    "text": "Летняя веранда",
+                                    "type": "info",
+                                    "cssClass": "photo_hotspot",
+                                    "clickHandlerFunc": function () {
+                                        open_img_veranda();
+                                    }
+                                },
+                                {
+                                    "pitch": -11,
+                                    "yaw": -77,
+                                    "type": "scene",
+                                    "text": "Ресторан",
+                                    "sceneId": "restoran",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -8,
+                                    "yaw": -92,
+                                    "type": "scene",
+                                    "text": "Ко второму корпусу",
+                                    "sceneId": "second_corp",
+                                    "cssClass": "pan_hotspot"
+                                },
+                            ]
                         }
                     }
 

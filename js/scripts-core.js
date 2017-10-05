@@ -612,6 +612,14 @@ function open_img_apt51() {
   ]);
 }
 
+function open_img_bouling() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/85.jpg',
+		},
+  ]);
+}
+
 
 function open_img2() {
   $.fancybox.open([

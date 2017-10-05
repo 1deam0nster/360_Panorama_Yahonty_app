@@ -243,6 +243,14 @@ pageDescription = "VR тур Яхонты Ногинск";
                                     "cssClass": "pan_hotspot"
                                 },
                                 {
+                                    "pitch": -5,
+                                    "yaw": 98,
+                                    "type": "scene",
+                                    "text": "Коттеджи",
+                                    "sceneId": "cottedgi",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
                                     "pitch": -16,
                                     "yaw": 13,
                                     "text": "Яхонтовый лес",
@@ -1542,10 +1550,28 @@ pageDescription = "VR тур Яхонты Ногинск";
                                 },
                                 {
                                     "pitch": -1,
+                                    "yaw": 102,
+                                    "text": "Футбольное поле",
+                                    "type": "info",
+                                    "cssClass": "photo_hotspot",
+                                    "clickHandlerFunc": function () {
+                                        open_img_footbool();
+                                    }
+                                },
+                                {
+                                    "pitch": -1,
                                     "yaw": 8,
                                     "type": "scene",
                                     "text": "Центральная площадь",
                                     "sceneId": "centr_pl",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": 2,
+                                    "yaw": 139,
+                                    "type": "scene",
+                                    "text": "Аппартаменты",
+                                    "sceneId": "apt",
                                     "cssClass": "pan_hotspot"
                                 },
                                 {
@@ -1964,6 +1990,14 @@ pageDescription = "VR тур Яхонты Ногинск";
                             "autoLoad": true,
                             "hotSpots": [
                                 {
+                                    "pitch": -3,
+                                    "yaw": -165,
+                                    "type": "scene",
+                                    "text": "Выход",
+                                    "sceneId": "congress_hall",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
                                     "pitch": -4,
                                     "yaw": -19,
                                     "type": "scene",
@@ -2051,10 +2085,12 @@ pageDescription = "VR тур Яхонты Ногинск";
                                 {
                                     "pitch": -3,
                                     "yaw": 58,
-                                    "type": "scene",
                                     "text": "Боулинг",
-                                    "sceneId": "bouling",
-                                    "cssClass": "photo_hotspot"
+                                    "type": "info",
+                                    "cssClass": "photo_hotspot",
+                                    "clickHandlerFunc": function () {
+                                        open_img_bouling();
+                                    }
                                 }
                             ]
                         },
@@ -3087,7 +3123,24 @@ pageDescription = "VR тур Яхонты Ногинск";
                                     "text": "Ресторан",
                                     "sceneId": "resto_holl",
                                     "cssClass": "pan_hotspot"
-                                }
+                                },
+                                {
+                                    "pitch": 4,
+                                    "yaw": -144,
+                                    "type": "scene",
+                                    "text": "Концертная площадь",
+                                    "sceneId": "dalni_dvor",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -1,
+                                    "yaw": 39,
+                                    "type": "scene",
+                                    "text": "Второй корпус",
+                                    "sceneId": "second_corp",
+                                    "cssClass": "pan_hotspot"
+                                },
+
                             ]
                         },
                         "resto_holl": {
@@ -3294,7 +3347,46 @@ pageDescription = "VR тур Яхонты Ногинск";
                             "hfov": 120,
                             "minHfov" : 90,
                             "maxHfov" : 120,
-                            "autoLoad": true
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -17,
+                                    "yaw": -37,
+                                    "text": "Вид на бахус хол",
+                                    "type": "info",
+                                    "cssClass": "photo_hotspot",
+                                    "clickHandlerFunc": function () {
+                                        open_img_bahus();
+                                    }
+                                },
+                                {
+                                    "pitch": -20,
+                                    "yaw": 60,
+                                    "text": "Летняя веранда",
+                                    "type": "info",
+                                    "cssClass": "photo_hotspot",
+                                    "clickHandlerFunc": function () {
+                                        open_img_veranda();
+                                    }
+                                },
+                                {
+                                    "pitch": -11,
+                                    "yaw": -77,
+                                    "type": "scene",
+                                    "text": "Ресторан",
+                                    "sceneId": "restoran",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -8,
+                                    "yaw": -92,
+                                    "type": "scene",
+                                    "text": "Ко второму корпусу",
+                                    "sceneId": "second_corp",
+                                    "cssClass": "pan_hotspot"
+                                },
+                            ]
                         }
                     }
 
