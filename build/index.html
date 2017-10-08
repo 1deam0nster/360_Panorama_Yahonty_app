@@ -32,10 +32,10 @@
 </head>
 <body class="page-index">
         <header>
-    
+
     <nav class="responsive-menu">
         <a href="#" class="toggle-menu" data-toggle-class="active" data-toggle-target=".main-menu, this"><svg height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M4 10h24c1.104 0 2-.896 2-2s-.896-2-2-2H4c-1.104 0-2 .896-2 2s.896 2 2 2zm24 4H4c-1.104 0-2 .896-2 2s.896 2 2 2h24c1.104 0 2-.896 2-2s-.896-2-2-2zm0 8H4c-1.104 0-2 .896-2 2s.896 2 2 2h24c1.104 0 2-.896 2-2s-.896-2-2-2z" fill="#fff"/></svg><span>МЕНЮ</span></a>
-        
+
         <ul class="main-menu">
             <li><a href="#" onclick="javascript:viewer.loadScene('sky');"><span>Главная</span></a></li>
              <li><a href="#"><span>Обзорные виды</span></a>
@@ -55,6 +55,7 @@
                     <li><a href="#" onclick="javascript:viewer.loadScene('second_corp');"><span>Корпус 2</span></a></li>
                     <li><a href="#" onclick="javascript:viewer.loadScene('congress_hall');"><span>Конгресс холл</span></a></li>
                     <li><a href="#" onclick="javascript:viewer.loadScene('restoran');"><span>Ресторан</span></a></li>
+                    <li><a href="#" onclick="javascript:viewer.loadScene('bath');"><span>Бани</span></a></li>
                 </ul>
             </li>
             <li><a href="#"><span>Номера</span></a>
@@ -84,8 +85,9 @@
             <li><a href="#"><span>Контакты</span></a></li> -->
         </ul>
     </nav>
-        
+
     </header>
+
             <div id="panorama"></div>
             <script>
                 viewer = pannellum.viewer('panorama', {
@@ -99,8 +101,6 @@
                             "title": "Яхонты",
                             "type": "equirectangular",
                             "panorama": "/images/pano/index.jpg",
-                            "minHfov" : 90,
-                            "maxHfov" : 120,
                             "haov": 360,
                             "vaov": 180,
                             "autoLoad": true,
@@ -108,6 +108,15 @@
                             "pitch": -35,
                             "yaw": -250,
                             "hfov": 120,
+                            //Ограничения по вертикали
+                            "minPitch": -70,
+                            "maxPitch": 70,
+                            //Ограничения по горизонтали
+                            //"minYaw" : 10,
+                            //"maxYaw" : 10,
+                            //Ограничение на приближение и удаление
+                            "minHfov" : 90,
+                            "maxHfov" : 120,
                             "hotSpotDebug": true,
                             "hotSpots": [
                                 {
@@ -282,6 +291,14 @@
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
+                              {
+                                  "pitch": -6,
+                                  "yaw": 147,
+                                  "type": "scene",
+                                  "text": "Центральная площадь",
+                                  "sceneId": "centr_pl",
+                                  "cssClass": "pan_hotspot"
+                              },
                                 {
                                     "pitch": -15,
                                     "yaw": -100,
@@ -351,6 +368,8 @@
                             "vaov": 180,
                             "hfov": 120,
                             "autoLoad": true,
+                            "minPitch": -80,
+
                             "hotSpotDebug": true,
                             "hotSpots": [
                                 {
@@ -364,11 +383,21 @@
                                 {
                                     "pitch": 0,
                                     "yaw": -126,
-                                    "text": "Фото балкон и туалет",
+                                    "text": "Фото балкон",
                                     "type": "info",
                                     "cssClass": "photo_hotspot",
                                     "clickHandlerFunc": function () {
                                         open_img_apt51();
+                                    }
+                                },
+                                {
+                                    "pitch": 0,
+                                    "yaw": 0,
+                                    "text": "Туалет",
+                                    "type": "info",
+                                    "cssClass": "photo_hotspot",
+                                    "clickHandlerFunc": function () {
+                                        open_img_apt51_toilet();
                                     }
                                 },
                             ]
@@ -387,6 +416,7 @@
                             "hfov": 120,
                             "autoLoad": true,
                             "hotSpotDebug": true,
+                            "minPitch": -80,
                             "hotSpots": [
                                 {
                                     "pitch": -3,
@@ -422,6 +452,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -443,6 +474,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -482,6 +514,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -513,6 +546,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -521,7 +555,7 @@
                                     "yaw": -39,
                                     "type": "scene",
                                     "text": "выход",
-                                    "sceneId": "35",
+                                    "sceneId": "35_holl",
                                     "cssClass": "pan_hotspot"
                                 },
                             ]
@@ -534,6 +568,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -542,7 +577,7 @@
                                     "yaw": -109,
                                     "type": "scene",
                                     "text": "Холл",
-                                    "sceneId": "35",
+                                    "sceneId": "35_holl",
                                     "cssClass": "pan_hotspot"
                                 },
                             ]
@@ -555,6 +590,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -606,6 +642,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -640,6 +677,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -661,6 +699,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -682,6 +721,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -703,6 +743,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -760,6 +801,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -786,7 +828,17 @@
                                     "text": "Спальня второго этажа",
                                     "sceneId": "bath_2et",
                                     "cssClass": "pan_hotspot"
-                                }
+                                },
+                                {
+                                    "pitch": -1,
+                                    "yaw": 2,
+                                    "text": "Бильярд",
+                                    "type": "info",
+                                    "cssClass": "photo_hotspot",
+                                    "clickHandlerFunc": function () {
+                                        open_img_bath2();
+                                    }
+                                },
                             ]
                         },
                         "bath_bass": {
@@ -796,6 +848,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -834,6 +887,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -862,6 +916,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -973,6 +1028,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "minHfov" : 90,
                             "maxHfov" : 120,
                             "autoLoad": true,
@@ -1062,6 +1118,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -1100,6 +1157,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -1129,6 +1187,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -1165,6 +1224,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -1211,6 +1271,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -1250,6 +1311,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -1271,6 +1333,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -1280,6 +1343,14 @@
                                     "type": "scene",
                                     "text": "Туалет",
                                     "sceneId": "3204_toilet",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -9,
+                                    "yaw": -158,
+                                    "type": "scene",
+                                    "text": "Гостинная",
+                                    "sceneId": "3204",
                                     "cssClass": "pan_hotspot"
                                 },
                                 {
@@ -1300,6 +1371,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -1320,6 +1392,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -1340,6 +1413,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -1348,7 +1422,7 @@
                                     "yaw": 83,
                                     "type": "scene",
                                     "text": "Первая комната",
-                                    "sceneId": "3205_1",
+                                    "sceneId": "3205",
                                     "cssClass": "pan_hotspot"
                                 },
                                 {
@@ -1384,6 +1458,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -1405,6 +1480,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -1443,6 +1519,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -1464,6 +1541,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -1495,6 +1573,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -1526,6 +1605,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -1548,17 +1628,28 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
                                 {
                                     "pitch": -2,
                                     "yaw": -24,
-                                    "text": "Балкон и туалет",
+                                    "text": "Балкон",
                                     "type": "info",
                                     "cssClass": "photo_hotspot",
                                     "clickHandlerFunc": function () {
                                         open_img_4c4124();
+                                    }
+                                },
+                                {
+                                    "pitch": -10,
+                                    "yaw": 118,
+                                    "text": "Туалет",
+                                    "type": "info",
+                                    "cssClass": "photo_hotspot",
+                                    "clickHandlerFunc": function () {
+                                        open_img_4c4124_toilet();
                                     }
                                 },
                                 {
@@ -1579,6 +1670,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -1673,12 +1765,13 @@
                             ]
                         },
                         "odnoet_cott": {
-                            "title": "Одноетажный коттедж",
+                            "title": "Одноэтажный коттедж",
                             "type": "equirectangular",
                             "panorama": "/images/cott/1et_holl.jpg",
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -1723,6 +1816,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -1753,6 +1847,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -1773,6 +1868,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -1795,6 +1891,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -1847,6 +1944,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -1865,7 +1963,7 @@
                                     "type": "info",
                                     "cssClass": "photo_hotspot",
                                     "clickHandlerFunc": function () {
-                                        open_img_2cott();
+                                        open_img_2cott_balk();
                                     }
                                 },
                             ]
@@ -1877,6 +1975,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -1897,6 +1996,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -1908,16 +2008,6 @@
                                     "sceneId": "dvuxet_cott",
                                     "cssClass": "pan_hotspot"
                                 },
-                                {
-                                    "pitch": -5,
-                                    "yaw": -51,
-                                    "text": "Дополнительные фото",
-                                    "type": "info",
-                                    "cssClass": "photo_hotspot",
-                                    "clickHandlerFunc": function () {
-                                        open_img_2cott();
-                                    }
-                                },
                             ]
                         },
                         "dvuxet_cott_toilet": {
@@ -1927,6 +2017,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -1980,7 +2071,34 @@
                             "hfov": 120,
                             "minHfov" : 90,
                             "maxHfov" : 120,
-                            "autoLoad": true
+                            "autoLoad": true,
+                            "hotSpotDebug": true,
+                            "hotSpots": [
+                                {
+                                    "pitch": -15,
+                                    "yaw": -119,
+                                    "type": "scene",
+                                    "text": "Второе лесное озеро",
+                                    "sceneId": "ozero2",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -6,
+                                    "yaw": 70,
+                                    "type": "scene",
+                                    "text": "Паркинг",
+                                    "sceneId": "parking",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -15,
+                                    "yaw": -53,
+                                    "type": "scene",
+                                    "text": "Главная площадь",
+                                    "sceneId": "centr_pl",
+                                    "cssClass": "pan_hotspot"
+                                },
+                            ]
                         },
                         "ozero2": {
                             "title": "Вид на озеро2",
@@ -2048,6 +2166,7 @@
                             "minHfov" : 90,
                             "maxHfov" : 120,
                             "autoLoad": true,
+                            "hotSpotDebug": true,
                             "hotSpots": [
                                 {
                                     "pitch": 0.6,
@@ -2055,6 +2174,22 @@
                                     "type": "scene",
                                     "text": "Конгресс-холл",
                                     "sceneId": "congress_hall_1etash",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": 0,
+                                    "yaw": 87,
+                                    "type": "scene",
+                                    "text": "Первый корпус",
+                                    "sceneId": "first_corp",
+                                    "cssClass": "pan_hotspot"
+                                },
+                                {
+                                    "pitch": -1,
+                                    "yaw": -121,
+                                    "type": "scene",
+                                    "text": "Центральная площадь",
+                                    "sceneId": "centr_pl",
                                     "cssClass": "pan_hotspot"
                                 },
                             ]
@@ -2067,6 +2202,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpots": [
                                 {
@@ -2131,6 +2267,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -2152,6 +2289,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpots": [
                                 {
@@ -2181,6 +2319,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -2195,7 +2334,7 @@
                             ]
                         },
 
-                        // Первый корпус 
+                        // Первый корпус
                         "first_corp": {
                             "title": "Первый корпус",
                             "type": "equirectangular",
@@ -2274,6 +2413,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -2303,6 +2443,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -2327,6 +2468,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -2371,6 +2513,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -2391,6 +2534,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -2411,6 +2555,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -2435,17 +2580,28 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
                                 {
-                                    "pitch": -11,
-                                    "yaw": -179,
-                                    "text": "Фото номера",
+                                    "pitch": 2,
+                                    "yaw": -178,
+                                    "text": "Балкон",
                                     "type": "info",
                                     "cssClass": "photo_hotspot",
                                     "clickHandlerFunc": function () {
                                         open_img_1c1316();
+                                    }
+                                },
+                                {
+                                    "pitch": -2,
+                                    "yaw": -26,
+                                    "text": "Туалет",
+                                    "type": "info",
+                                    "cssClass": "photo_hotspot",
+                                    "clickHandlerFunc": function () {
+                                        open_img_1c1316_toilet();
                                     }
                                 },
                                 {
@@ -2474,12 +2630,13 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
                                 {
                                     "pitch": -4,
-                                    "yaw": 159,
+                                    "yaw": -159,
                                     "type": "scene",
                                     "text": "Выход",
                                     "sceneId": "1316",
@@ -2498,6 +2655,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -2528,12 +2686,13 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
                                 {
                                     "pitch": -14,
-                                    "yaw": -78,
+                                    "yaw": 78,
                                     "type": "scene",
                                     "text": "Холл",
                                     "sceneId": "1101_holl",
@@ -2548,12 +2707,13 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
                                 {
                                     "pitch": -6,
-                                    "yaw": -14,
+                                    "yaw": 61,
                                     "type": "scene",
                                     "text": "Комната",
                                     "sceneId": "1101",
@@ -2569,7 +2729,7 @@
                                 },
                                 {
                                     "pitch": -7,
-                                    "yaw": 61,
+                                    "yaw": -14,
                                     "type": "scene",
                                     "text": "Туалет",
                                     "sceneId": "1101_toilet",
@@ -2587,6 +2747,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -2625,6 +2786,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -2654,7 +2816,7 @@
                             "hfov": 120,
                             "minHfov" : 90,
                             "maxHfov" : 120,
-                            "autoLoad": true,                            
+                            "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
                                 {
@@ -2728,7 +2890,8 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
-                            "autoLoad": true,                            
+                            "minPitch": -80,
+                            "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
                                 {
@@ -2756,7 +2919,8 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
-                            "autoLoad": true,                            
+                            "minPitch": -80,
+                            "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
                                 {
@@ -2780,7 +2944,8 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
-                            "autoLoad": true,                            
+                            "minPitch": -80,
+                            "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
                                 {
@@ -2800,12 +2965,13 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
-                            "autoLoad": true,                            
+                            "minPitch": -80,
+                            "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
                                 {
                                     "pitch": -9,
-                                    "yaw": -102,
+                                    "yaw": 102,
                                     "type": "scene",
                                     "text": "Выход",
                                     "sceneId": "2201_holl",
@@ -2820,7 +2986,8 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
-                            "autoLoad": true,                            
+                            "minPitch": -80,
+                            "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
                                 {
@@ -2840,7 +3007,8 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
-                            "autoLoad": true,                            
+                            "minPitch": -80,
+                            "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
                                 {
@@ -2890,7 +3058,8 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
-                            "autoLoad": true,                            
+                            "minPitch": -80,
+                            "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
                                 {
@@ -2920,7 +3089,8 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
-                            "autoLoad": true,                            
+                            "minPitch": -80,
+                            "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
                                 {
@@ -2940,7 +3110,8 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
-                            "autoLoad": true,                            
+                            "minPitch": -80,
+                            "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
                                 {
@@ -2960,7 +3131,8 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
-                            "autoLoad": true,                            
+                            "minPitch": -80,
+                            "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
                                 {
@@ -3010,7 +3182,8 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
-                            "autoLoad": true,                            
+                            "minPitch": -80,
+                            "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
                                 {
@@ -3040,7 +3213,8 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
-                            "autoLoad": true,                            
+                            "minPitch": -80,
+                            "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
                                 {
@@ -3060,7 +3234,8 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
-                            "autoLoad": true,                            
+                            "minPitch": -80,
+                            "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
                                 {
@@ -3103,7 +3278,8 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
-                            "autoLoad": true,                            
+                            "minPitch": -80,
+                            "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
                                 {
@@ -3133,7 +3309,8 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
-                            "autoLoad": true,                            
+                            "minPitch": -80,
+                            "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
                                 {
@@ -3153,7 +3330,8 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
-                            "autoLoad": true,                            
+                            "minPitch": -80,
+                            "autoLoad": true,
                             "hotSpots": [
                                 {
                                     "pitch": -9,
@@ -3230,6 +3408,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -3267,7 +3446,7 @@
                                         open_img_restoholl();
                                     }
                                 }
-                                
+
 
                             ]
                         },
@@ -3278,6 +3457,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -3332,6 +3512,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -3352,6 +3533,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -3372,6 +3554,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [
@@ -3392,6 +3575,7 @@
                             "haov": 360,
                             "vaov": 180,
                             "hfov": 120,
+                            "minPitch": -80,
                             "autoLoad": true,
                             "hotSpotDebug": true,
                             "hotSpots": [

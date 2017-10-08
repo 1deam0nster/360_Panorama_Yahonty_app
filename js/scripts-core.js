@@ -1,4 +1,4 @@
-// Photos modal menu 
+// Photos modal menu
 function open_img_bahus() {
   $.fancybox.open([
     {
@@ -78,6 +78,17 @@ function open_img_bath() {
 		},
 		{
       src  : 'images/photo/15.jpg',
+    },
+  ]);
+}
+
+function open_img_bath2() {
+  $.fancybox.open([
+    {
+      src  : 'images/photo/bath/1.jpg',
+		},
+    {
+      src  : 'images/photo/bath/2.jpg',
     },
   ]);
 }
@@ -170,7 +181,7 @@ function open_img_cott() {
 		},
 		{
       src  : 'images/photo/33.jpg',
-		},		
+		},
 		{
       src  : 'images/photo/34.jpg',
 		},
@@ -196,7 +207,7 @@ function open_img_bass() {
 		},
 		{
       src  : 'images/photo/40.jpg',
-		},		
+		},
 		{
       src  : 'images/photo/41.jpg',
 		},
@@ -240,7 +251,7 @@ function open_img_spa() {
 		},
 		{
       src  : 'images/photo/53.jpg',
-		},		
+		},
 		{
       src  : 'images/photo/54.jpg',
 		},
@@ -272,7 +283,7 @@ function open_img_fit() {
 		},
 		{
       src  : 'images/photo/62.jpg',
-		},		
+		},
 		{
       src  : 'images/photo/63.jpg',
 		},
@@ -298,7 +309,7 @@ function open_img_glcorp() {
 		},
 		{
       src  : 'images/photo/69.jpg',
-		},		
+		},
 		{
       src  : 'images/photo/70.jpg',
 		},
@@ -341,7 +352,7 @@ function open_img_4corp() {
 		},
 		{
       src  : 'images/photo/80.jpg',
-		},		
+		},
 		{
       src  : 'images/photo/81.jpg',
 		}
@@ -381,7 +392,7 @@ function open_img_congholl2() {
 		},
 		{
       src  : 'images/photo/90.jpg',
-		},		
+		},
 		{
       src  : 'images/photo/91.jpg',
 		},
@@ -406,17 +417,20 @@ function open_img_congholl2() {
 function open_img_1c1316() {
   $.fancybox.open([
 		{
-      src  : 'images/photo/1corp/1.jpg',
-		},
-		{
-      src  : 'images/photo/1corp/2.jpg',
-		},
-		{
       src  : 'images/photo/1corp/3.jpg',
 		},
 		{
       src  : 'images/photo/1corp/4.jpg',
 		}
+  ]);
+}
+
+function open_img_1c1316_toilet() {
+  $.fancybox.open([
+		{
+      src  : 'images/photo/1corp/1.jpg',
+		},
+
   ]);
 }
 
@@ -504,7 +518,12 @@ function open_img_4c4124() {
   $.fancybox.open([
 		{
       src  : 'images/photo/4corp/1.jpg',
-		},
+		}
+  ]);
+}
+
+function open_img_4c4124_toilet() {
+  $.fancybox.open([
 		{
       src  : 'images/photo/4corp/2.jpg',
 		}
@@ -523,29 +542,25 @@ function open_img_1cott() {
   $.fancybox.open([
 		{
       src  : 'images/photo/35.jpg',
-		},
-		{
-      src  : 'images/photo/34.jpg',
-		},
-		{
-      src  : 'images/photo/33.jpg',
-		},
-		{
-      src  : 'images/photo/32.jpg',
 		}
   ]);
 }
 
-function open_img_2cott() {
+// function open_img_2cott() {
+//   $.fancybox.open([
+// 		{
+//       src  : 'images/photo/30.jpg',
+// 		},
+// 		{
+//       src  : 'images/photo/29.jpg',
+// 		}
+//   ]);
+// }
+
+function open_img_2cott_balk() {
   $.fancybox.open([
 		{
       src  : 'images/photo/31.jpg',
-		},
-		{
-      src  : 'images/photo/30.jpg',
-		},
-		{
-      src  : 'images/photo/29.jpg',
 		}
   ]);
 }
@@ -604,13 +619,18 @@ function open_img_apt51() {
 		},
 		{
       src  : 'images/photo/apt/10.jpg',
-		},
-		{
-      src  : 'images/photo/apt/11.jpg',
-		},
-
+		}
   ]);
 }
+
+function open_img_apt51_toilet() {
+  $.fancybox.open([
+    {
+      src  : 'images/photo/apt/11.jpg',
+		},
+  ]);
+}
+
 
 function open_img_bouling() {
   $.fancybox.open([
@@ -618,28 +638,6 @@ function open_img_bouling() {
       src  : 'images/photo/85.jpg',
 		},
   ]);
-}
-
-
-function open_img2() {
-  $.fancybox.open([
-    {
-      src  : '/images/photo/1.jpg',
-      opts : {
-        caption : 'First caption',
-        thumb   : 'https://c1.staticflickr.com/9/8148/29324593462_f890687b7a_m.jpg'
-      }
-    },
-    {
-      src  : '/images/photo/2.jpg',
-      opts : {
-        caption : 'Second caption',
-        thumb   : 'https://c2.staticflickr.com/6/5499/30972532232_e9a298a0c5_m.jpg'
-      }
-    }
-  ], {
-    loop : false
-  });
 }
 
 
@@ -653,13 +651,41 @@ if(submenus.length > 0) for(var i=0; i<submenus.length; i++) {
 
     span.addEventListener('click', function(){
         this.classList.toggle('active');
-        // this.nextElementSibling.classList.toggle('active');
+       //this.nextElementSibling.classList.toggle('active');
 		  this.parentNode.classList.toggle('active');
     });
-	
+
     submenus[i].previousElementSibling.appendChild(span);
     submenus[i].parentNode.insertBefore(span, submenus[i]);
 }
+
+// $(function() {
+//   $('.main-menu').on('click', function() {
+//     var $this = $(this);
+//     if ($this.hasClass('active')) {
+//       $this.removeClass('active');
+//       $(document).off('click.menu');
+//
+//     } else {
+//       $this.addClass('active');
+//       $(document).on('click.menu', function(e) {
+//         if ($(e.target).closest('.main-menu').length === 0) {
+//           $('.main-menu').removeClass('active');
+//           $(document).off('click.menu');
+//
+//         }
+//       });
+//     }
+//   });
+// });
+// $(function) {
+//   $('.sub-menu').on('click', function() {
+//     var $this = $('.main-menu');
+//     $this.removeClass('.active');
+//   }
+// }
+
+
 
 
 /*
@@ -668,7 +694,7 @@ if(submenus.length > 0) for(var i=0; i<submenus.length; i++) {
 	data-toggle-class - classes to apply to targets
 	data-toggle-target - target's selectors to apply classes to
 
-	If there is no 'data-toggle-target' attribute (only 'data-toggle-class'), classes are applyed to trigger element. 
+	If there is no 'data-toggle-target' attribute (only 'data-toggle-class'), classes are applyed to trigger element.
 	If classes are needed to be appled to targets including trigger element itself, use keywords 'this' or 'self'.
 */
 
@@ -691,17 +717,17 @@ if(submenus.length > 0) for(var i=0; i<submenus.length; i++) {
 		for(var n=0; n<targetslist.length; n++)
 		{
 			targetslist[n] = targetslist[n].trim();
-			
+
 			if( (targetslist[n] == 'this' || targetslist[n] == 'self') && obj && dotoself ) dotoself(obj);
 			if(targetslist[n] == 'next' && obj && dotonext ) dotonext(obj.nextElementSibling);
-			else 
+			else
 			{
 				var elems = document.querySelectorAll( targetslist[n] );
-				if(elems.length > 0) 
+				if(elems.length > 0)
 				{
-					for(var m=0; m<elems.length; m++) 
+					for(var m=0; m<elems.length; m++)
 					{
-						dototargets(elems[m]); 
+						dototargets(elems[m]);
 					}
 				}
 			}
@@ -710,9 +736,9 @@ if(submenus.length > 0) for(var i=0; i<submenus.length; i++) {
 
 	var clickToggle = document.querySelectorAll('[data-toggle-class]');
 
-	if(clickToggle.length > 0) 
+	if(clickToggle.length > 0)
 	{
-		for(var i=0; i<clickToggle.length; i++) 
+		for(var i=0; i<clickToggle.length; i++)
 		{
 			clickToggle[i].addEventListener('click', function(e) {
 				e.preventDefault();
@@ -726,7 +752,7 @@ if(submenus.length > 0) for(var i=0; i<submenus.length; i++) {
 				var targets = this.getAttribute('data-toggle-target');
 
 				if(!targets) toggleClasses(classes, this); //for(var n=0; n<classes.length; n++)  this.classList.toggle(classes[n]);
-				else 
+				else
 				{
 					applyToTargets(targets, function(elem){ toggleClasses(classes, elem); }, this, function(elem){ toggleClasses(classes, elem); }, function(elem){ toggleClasses(classes, elem); });
 				}
