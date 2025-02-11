@@ -1,6 +1,5 @@
-# Сайт бродилка по панораме отеля Яхонты
+# 3д панорама Яхонты
 https://truevirtualtours.com/ru/tag-tour/ahonty+drone
-
 
 # Установка
 ### Required Components
